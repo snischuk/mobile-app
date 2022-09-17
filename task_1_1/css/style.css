@@ -13,32 +13,32 @@ body {
 
 /* ======== title block =========== */
 .title__name {
+  margin: 10px 0;
   text-align: center;
   font-size: 36px;
   line-height: 100%;
-  margin: 10px 0;
 }
 .title__years {
+  margin: 10px 0;
+  text-align: center;
   font-size: 20px;
   line-height: 100%;
-  text-align: center;
-  margin: 10px 0;
 }
 .title__subscription {
+  margin: 10px 0;
+  text-align: center;
   font-size: 20px;
   line-height: 100%;
-  text-align: center;
-  margin: 10px 0;
 }
 
 /* ======== subtitle block =========== */
 .subtitle__info {
-  font-size: 16px;
-  text-align: justify;
+  padding: 15px;
   margin: 0 0 10px 0;
+  text-align: justify;
+  font-size: 16px;
   border: 1px solid rgb(190, 190, 190);
   box-shadow: 1px -1px 1px 0px rgb(0 0 0 / 10%);
-  padding: 15px;
 }
 
 /* ======== image block =========== */
@@ -46,43 +46,57 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0px 0px 30px 0px;
   border: 1px solid rgb(190, 190, 190);
   box-shadow: 1px -1px 1px 0px rgb(0 0 0 / 10%);
-  margin: 0px 0px 30px 0px;
 }
 .photo-wrapper img {
   width: 300px;
   height: 400px;
-  border-radius: 50%;
   padding: 15px;
+  border-radius: 50%;
 }
 .photo__discription {
-  font-size: 14px;
-  margin: 0;
-  background-color: #dddddd;
   width: 100%;
-  text-align: center;
+  margin: 0;
   padding: 5px;
   box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+  background-color: #dddddd;
 }
 @media (max-width: 767px) {
+  .title__name,
+  .title__years,
+  .title__subscription {
+    margin: 5px 0;
+  }
+
+  .photo-wrapper img {
+    width: 170px;
+    height: 230px;
+  }
   .photo__discription {
     font-size: 12px;
+  }
+  .list-title {
+    padding: 0px 5px;
+    font-size: 18px;
   }
 }
 /* ======== list block =========== */
 .list-title {
+  margin: 0px;
   font-size: 20px;
   line-height: 100%;
-  margin: 0px;
 }
 
 /* ======== link block =========== */
 .readMore {
-  font-size: 14px;
-  font-style: italic;
   margin: 0;
   padding: 5px;
+  font-size: 14px;
+  font-style: italic;
   text-align: center;
 }
 .readMore a {
