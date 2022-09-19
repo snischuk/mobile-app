@@ -6,7 +6,9 @@ body {
   display: grid;
   grid-template-rows: minmax(100px, auto) 1fr minmax(100px, auto);
   grid-template-columns: 1fr;
+
   min-height: 100vh;
+  min-width: 320px;
 }
 .header {
   display: grid;
@@ -15,12 +17,12 @@ body {
   background-color: blue;
   color: white;
 }
+
 .main-wrapper {
   display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: minmax(50px, auto) 1fr minmax(50px, auto);
+  grid-template-columns: 1fr;
 }
-
 .navigation {
   padding: 20px;
   background-color: orange;
@@ -41,10 +43,9 @@ body {
   background-color: green;
   color: white;
 }
-
-@media (max-width: 800px) {
+@media (min-width: 767px) {
   .main-wrapper {
-    grid-template-rows: minmax(50px, auto) 1fr minmax(50px, auto);
-    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
   }
 }
