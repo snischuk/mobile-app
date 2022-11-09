@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", Verdana, sans-serif;
+  background: linear-gradient(to right, #547f91 0%, #3d6375 50%, #3d6375 50%, #547f91 100%);
+}
+
+.create {
+  min-width: 70rem;
+  max-width: 76.8rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.header {
+  font-size: 2.8rem;
+  line-height: 3rem;
+  color: #6c6c6c;
+  text-align: center;
+  background-color: #eff0f1;
+  border-bottom: 0.1rem solid #cdcdcd;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 2rem;
+}
+
+.body {
+  flex-grow: 1;
+  background-color: #ffffff;
+  padding: 2.5rem 6rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 49%;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  color: #54bc95;
+}
+
+.input {
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid #cdcdcd;
+  border-radius: 0.5rem;
+}
+.input::-moz-placeholder {
+  font-family: "Roboto", Verdana, sans-serif;
+  color: #dadbdb;
+  font-size: 1.6rem;
+}
+.input:-ms-input-placeholder {
+  font-family: "Roboto", Verdana, sans-serif;
+  color: #dadbdb;
+  font-size: 1.6rem;
+}
+.input::placeholder {
+  font-family: "Roboto", Verdana, sans-serif;
+  color: #dadbdb;
+  font-size: 1.6rem;
+}
+
+.radio-items {
+  justify-content: flex-start;
+}
+
+.label {
+  color: #6c6c6c;
+}
+
+.radio-item {
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox-items {
+  justify-content: space-around;
+}
+
+.checkbox-item {
+  cursor: pointer;
+  margin: 0 0.2rem 0;
+}
+
+.select {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  color: #6c6c6c;
+  border: 0.1rem solid #cdcdcd;
+  border-radius: 0.5rem;
+}
+.select::-moz-placeholder {
+  font-family: "Roboto", Verdana, sans-serif;
+  color: #dadbdb;
+  font-size: 1.6rem;
+}
+.select:-ms-input-placeholder {
+  font-family: "Roboto", Verdana, sans-serif;
+  color: #dadbdb;
+  font-size: 1.6rem;
+}
+.select::placeholder {
+  font-family: "Roboto", Verdana, sans-serif;
+  color: #dadbdb;
+  font-size: 1.6rem;
+}
+
+.range-input {
+  cursor: pointer;
+  width: 82%;
+  accent-color: #54bc95;
+}
+
+.range-counter {
+  padding: 1rem 0.5rem;
+  color: #ffffff;
+  background-color: #54bc95;
+  border-radius: 0.5rem;
+}
+
+.file {
+  cursor: pointer;
+  color: #6c6c6c;
+  border: none;
+  padding: 0.2rem 1rem;
+}
+
+.number {
+  color: #6c6c6c;
+  border: 0.1rem solid #cdcdcd;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+.number::-moz-placeholder {
+  font-family: "Roboto", Verdana, sans-serif;
+  color: #dadbdb;
+  font-size: 1.6rem;
+}
+.number:-ms-input-placeholder {
+  font-family: "Roboto", Verdana, sans-serif;
+  color: #dadbdb;
+  font-size: 1.6rem;
+}
+.number::placeholder {
+  font-family: "Roboto", Verdana, sans-serif;
+  color: #dadbdb;
+  font-size: 1.6rem;
+}
+
+.textarea {
+  color: #6c6c6c;
+  resize: vertical;
+  border: 0.1rem solid #cdcdcd;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+.textarea::-moz-placeholder {
+  font-family: "Roboto", Verdana, sans-serif;
+  color: #dadbdb;
+  font-size: 1.6rem;
+}
+.textarea:-ms-input-placeholder {
+  font-family: "Roboto", Verdana, sans-serif;
+  color: #dadbdb;
+  font-size: 1.6rem;
+}
+.textarea::placeholder {
+  font-family: "Roboto", Verdana, sans-serif;
+  color: #dadbdb;
+  font-size: 1.6rem;
+}
+
+.footer {
+  background-color: #eff0f1;
+  border-top: 0.1rem solid #cdcdcd;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 1.5rem 6rem 0;
+}
+
+.flex-end {
+  align-items: flex-end;
+}
+
+.footer__btn {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #54bc95;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+}
+
+@media (max-width: 425px) {
+  .body {
+    padding: 1.5rem 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Form page</title>
+  </head>
+  <body>
+    <form class="create" action="#" method="post">
+      <h2 class="header">Create Account</h2>
+
+      <div class="body">
+        <!-- #name -->
+        <div class="row">
+          <div class="column">
+            <h3 class="title" required>First name*</h3>
+            <input
+              class="input"
+              type="text"
+              name="fname"
+              placeholder="enter your first name"
+              required
+            />
+          </div>
+          <div class="column">
+            <h3 class="title">Last name</h3>
+            <input
+              class="input"
+              type="text"
+              name="lname"
+              placeholder="enter your last name"
+            />
+          </div>
+        </div>
+        <!-- #email -->
+        <div class="column">
+          <h3 class="title">Email*</h3>
+          <input
+            class="input"
+            type="email"
+            name="email"
+            placeholder="enter your email"
+            required
+          />
+        </div>
+        <!-- #password -->
+        <div class="row">
+          <div class="column">
+            <h3 class="title">Password*</h3>
+            <input
+              class="input"
+              type="password"
+              placeholder="enter your password"
+              required
+            />
+          </div>
+          <div class="column">
+            <h3 class="title">Confirm Password*</h3>
+            <input
+              class="input"
+              type="password"
+              placeholder="enter your password again"
+              required
+            />
+          </div>
+        </div>
+        <!-- #radio-checkbox -->
+        <div class="row">
+          <div class="column">
+            <h3 class="title">Gender</h3>
+            <div class="row radio-items">
+              <label class="label">
+                <input
+                  type="radio"
+                  class="radio-item"
+                  name="gender"
+                  value="male"
+                />Male
+              </label>
+              <label class="label">
+                <input
+                  type="radio"
+                  class="radio-item"
+                  name="gender"
+                  value="female"
+                />Female
+              </label>
+            </div>
+          </div>
+          <div class="column">
+            <h3 class="title">Hobbies</h3>
+            <div class="row checkbox-items">
+              <label class="label">
+                <input
+                  type="checkbox"
+                  class="checkbox-item"
+                  name="hobby"
+                  value="music"
+                />Music
+              </label>
+              <label class="label">
+                <input
+                  type="checkbox"
+                  class="checkbox-item"
+                  name="hobby"
+                  value="sports"
+                />Sports
+              </label>
+              <label class="label">
+                <input
+                  type="checkbox"
+                  class="checkbox-item"
+                  name="hobby"
+                  value="travel"
+                />Travel
+              </label>
+              <label class="label">
+                <input
+                  type="checkbox"
+                  class="checkbox-item"
+                  name="hobby"
+                  value="movies"
+                />Movies
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- #select-range -->
+        <div class="row">
+          <div class="column">
+            <h3 class="title">Source of Income</h3>
+            <select class="select" name="income-source">
+              <option value="employed">Employed</option>
+              <option value="self">Self-employed</option>
+              <option value="unemployed">Unemployed</option>
+            </select>
+          </div>
+
+          <div class="column">
+            <h3 class="title">Income</h3>
+            <div class="row">
+              <input class="range-input" type="range" name="income" />
+              <span class="range-counter">20K</span>
+            </div>
+          </div>
+        </div>
+        <!-- #file-number -->
+        <div class="row">
+          <div class="column">
+            <h3 class="title">Upload Profile Picture</h3>
+            <input class="file" type="file" accept="image/*" />
+          </div>
+
+          <div class="column">
+            <h3 class="title">Age</h3>
+            <input class="number" type="number" min="5" max="120" value="18" />
+          </div>
+        </div>
+        <!-- #textarea -->
+        <div class="column">
+          <h3 class="title">Bio</h3>
+          <textarea class="textarea" rows="5" cols="10"></textarea>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="container">
+          <div class="column flex-end">
+            <input class="footer__btn" type="submit" value="Create" />
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
