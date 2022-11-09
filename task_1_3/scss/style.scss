@@ -1,10 +1,9 @@
+$color-grey: #dadbdb;
 $color-grey-dark: #6c6c6c;
 $color-grey-light: #eff0f1;
+$color-grey-silver: #cdcdcd;
 $color-green: #54bc95;
 $color-white: #ffffff;
-$color-placeholder: #dadbdb;
-$color-border: #cdcdcd;
-$color-input-border: #cdcdcd;
 
 * {
   margin: 0;
@@ -41,7 +40,7 @@ body {
   color: $color-grey-dark;
   text-align: center;
   background-color: $color-grey-light;
-  border-bottom: 0.1rem solid $color-border;
+  border-bottom: 0.1rem solid $color-grey-silver;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   padding: 2rem;
@@ -69,11 +68,11 @@ body {
 }
 .input {
   padding: 0.5rem 1rem;
-  border: 0.1rem solid $color-input-border;
+  border: 0.1rem solid $color-grey-silver;
   border-radius: 0.5rem;
   &::placeholder {
     font-family: "Roboto", Verdana, sans-serif;
-    color: $color-placeholder;
+    color: $color-grey;
     font-size: 1.6rem;
   }
 }
@@ -98,11 +97,11 @@ body {
   cursor: pointer;
   padding: 0.5rem 1rem;
   color: $color-grey-dark;
-  border: 0.1rem solid $color-input-border;
+  border: 0.1rem solid $color-grey-silver;
   border-radius: 0.5rem;
   &::placeholder {
     font-family: "Roboto", Verdana, sans-serif;
-    color: $color-placeholder;
+    color: $color-grey;
     font-size: 1.6rem;
   }
 }
@@ -126,30 +125,30 @@ body {
 }
 .number {
   color: $color-grey-dark;
-  border: 0.1rem solid $color-input-border;
+  border: 0.1rem solid $color-grey-silver;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   &::placeholder {
     font-family: "Roboto", Verdana, sans-serif;
-    color: $color-placeholder;
+    color: $color-grey;
     font-size: 1.6rem;
   }
 }
 .textarea {
   color: $color-grey-dark;
   resize: vertical;
-  border: 0.1rem solid $color-input-border;
+  border: 0.1rem solid $color-grey-silver;
   border-radius: 5px;
   padding: 0.5rem 1rem;
   &::placeholder {
     font-family: "Roboto", Verdana, sans-serif;
-    color: $color-placeholder;
+    color: $color-grey;
     font-size: 1.6rem;
   }
 }
 .footer {
   background-color: $color-grey-light;
-  border-top: 0.1rem solid $color-border;
+  border-top: 0.1rem solid $color-grey-silver;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
   padding: 1.5rem 6rem 0;
