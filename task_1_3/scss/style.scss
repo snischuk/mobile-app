@@ -5,6 +5,10 @@ $color-grey-silver: #cdcdcd;
 $color-green: #54bc95;
 $color-white: #ffffff;
 
+%font-family {
+  font-family: "Roboto", Verdana, sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -50,7 +54,8 @@ body {
   border-bottom: 1px solid $color-grey-silver;
   padding: 20px;
 
-  font-family: "Roboto", Verdana, sans-serif;
+  // font-family: "Roboto", Verdana, sans-serif;
+  @extend %font-family;
   color: $color-grey-dark;
   font-size: 2.8rem;
   line-height: 3rem;
@@ -76,7 +81,8 @@ body {
   // color: $color-green;
   font-weight: bold;
 
-  font-family: "Roboto", Verdana, sans-serif;
+  // font-family: "Roboto", Verdana, sans-serif;
+  @extend %font-family;
   color: $color-green;
   font-size: 1.6rem;
   line-height: 2.2rem;
@@ -87,7 +93,8 @@ body {
   border: 1px solid $color-grey-silver;
   border-radius: 5px;
 
-  font-family: "Roboto", Verdana, sans-serif;
+  // font-family: "Roboto", Verdana, sans-serif;
+  @extend %font-family;
   color: $color-grey-dark;
   font-size: 1.6rem;
   line-height: 2.2rem;
@@ -107,7 +114,8 @@ body {
   // color: $color-grey-dark;
   cursor: pointer;
 
-  font-family: "Roboto", Verdana, sans-serif;
+  // font-family: "Roboto", Verdana, sans-serif;
+  @extend %font-family;
   color: $color-grey-dark;
   font-size: 1.6rem;
   line-height: 2.2rem;
@@ -122,7 +130,8 @@ body {
   border: 1px solid $color-grey-silver;
   border-radius: 5px;
 
-  font-family: "Roboto", Verdana, sans-serif;
+  // font-family: "Roboto", Verdana, sans-serif;
+  @extend %font-family;
   color: $color-grey-dark;
   font-size: 1.6rem;
   line-height: 2.2rem;
@@ -139,7 +148,8 @@ body {
   background-color: $color-green;
   border-radius: 5px;
 
-  font-family: "Roboto", Verdana, sans-serif;
+  // font-family: "Roboto", Verdana, sans-serif;
+  @extend %font-family;
   color: $color-white;
   font-size: 1.6rem;
   line-height: 2.2rem;
@@ -151,7 +161,8 @@ body {
   border: none;
   padding: 2px 10px;
 
-  font-family: "Roboto", Verdana, sans-serif;
+  // font-family: "Roboto", Verdana, sans-serif;
+  @extend %font-family;
   color: $color-grey-dark;
   font-size: 1.6rem;
   line-height: 2.2rem;
@@ -164,7 +175,8 @@ body {
   border-radius: 5px;
   padding: 5px 10px;
 
-  font-family: "Roboto", Verdana, sans-serif;
+  // font-family: "Roboto", Verdana, sans-serif;
+  @extend %font-family;
   color: $color-grey-dark;
   font-size: 1.6rem;
   line-height: 2.2rem;
@@ -176,7 +188,8 @@ body {
   border-radius: 5px;
   padding: 5px 10px;
 
-  font-family: "Roboto", Verdana, sans-serif;
+  // font-family: "Roboto", Verdana, sans-serif;
+  @extend %font-family;
   color: $color-grey-dark;
   font-size: 1.6rem;
   line-height: 2.2rem;
