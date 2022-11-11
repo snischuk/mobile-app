@@ -1,9 +1,6 @@
-$color-grey: #dadbdb;
-$color-grey-dark: #6c6c6c;
-$color-grey-light: #eff0f1;
-$color-grey-silver: #cdcdcd;
-$color-green: #54bc95;
-$color-white: #ffffff;
+$color-primary: #54bc95;
+$color-secondary: #6c6c6c;
+$color-border: #cdcdcd;
 
 %font-family {
   font-family: "Roboto", Verdana, sans-serif;
@@ -40,21 +37,21 @@ body {
   flex-direction: column;
 
   overflow: hidden;
-  border: 1px solid $color-grey-silver;
+  border: 1px solid $color-border;
   border-radius: 20px;
 }
 
 .header {
   text-align: center;
-  background-color: $color-grey-light;
-  border-bottom: 1px solid $color-grey-silver;
+  background-color: #eff0f1;
+  border-bottom: 1px solid $color-border;
   padding: 20px;
 
   @extend %font-family;
-  @include font($color-grey-dark, 2.8rem, 3rem);
+  @include font($color-secondary, 2.8rem, 3rem);
 }
 .body {
-  background-color: $color-white;
+  background-color: #ffffff;
   padding: 25px 60px;
 }
 
@@ -74,18 +71,18 @@ body {
   font-weight: bold;
 
   @extend %font-family;
-  @include font($color-green, 1.6rem, 2.2rem);
+  @include font($color-primary, 1.6rem, 2.2rem);
 }
 .input-field {
   width: 100%;
   padding: 5px 10px;
-  border: 1px solid $color-grey-silver;
+  border: 1px solid $color-border;
   border-radius: 5px;
 
   @extend %font-family;
-  @include font($color-grey-dark, 1.6rem, 2.2rem);
+  @include font($color-secondary, 1.6rem, 2.2rem);
   &::placeholder {
-    color: $color-grey;
+    color: #dadbdb;
   }
 }
 .group-items {
@@ -99,32 +96,32 @@ body {
   cursor: pointer;
 
   @extend %font-family;
-  @include font($color-grey-dark, 1.6rem, 2.2rem);
+  @include font($color-secondary, 1.6rem, 2.2rem);
 }
 
 .select {
   height: 3.6rem;
   cursor: pointer;
   padding: 0 10px;
-  border: 1px solid $color-grey-silver;
+  border: 1px solid $color-border;
   border-radius: 5px;
 
   @extend %font-family;
-  @include font($color-grey-dark, 1.6rem, 2.2rem);
+  @include font($color-secondary, 1.6rem, 2.2rem);
 }
 
 .input-range {
   cursor: pointer;
   width: 100%;
-  accent-color: $color-green;
+  accent-color: $color-primary;
 }
 .input-range-counter {
   padding: 10px 5px;
-  background-color: $color-green;
+  background-color: $color-primary;
   border-radius: 5px;
 
   @extend %font-family;
-  @include font($color-grey-dark, 1.6rem, 2.2rem);
+  @include font(#ffffff, 1.6rem, 2.2rem);
 }
 .input-file {
   width: 100%;
@@ -133,33 +130,33 @@ body {
   padding: 2px 10px;
 
   @extend %font-family;
-  @include font($color-grey-dark, 1.6rem, 2.2rem);
+  @include font($color-secondary, 1.6rem, 2.2rem);
 }
 .input-number {
-  border: 1px solid $color-grey-silver;
+  border: 1px solid $color-border;
   border-radius: 5px;
   padding: 5px 10px;
 
   @extend %font-family;
-  @include font($color-grey-dark, 1.6rem, 2.2rem);
+  @include font($color-secondary, 1.6rem, 2.2rem);
 }
 .textarea {
   resize: vertical;
-  border: 1px solid $color-grey-silver;
+  border: 1px solid $color-border;
   border-radius: 5px;
   padding: 5px 10px;
 
   @extend %font-family;
-  @include font($color-grey-dark, 1.6rem, 2.2rem);
+  @include font($color-secondary, 1.6rem, 2.2rem);
 
   &::placeholder {
-    color: $color-grey;
+    color: #dadbdb;
   }
 }
 
 .footer {
-  background-color: $color-grey-light;
-  border-top: 1px solid $color-grey-silver;
+  background-color: #eff0f1;
+  border-top: 1px solid $color-border;
   padding: 15px 60px 0;
 }
 .flex-end {
@@ -167,13 +164,13 @@ body {
 }
 .footer__btn {
   cursor: pointer;
-  background-color: $color-green;
+  background-color: $color-primary;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
 
   @extend %font-family;
-  @include font($color-white, 1.8rem, 2.4rem);
+  @include font(#a3eedc, 1.8rem, 2.4rem);
 }
 @media (max-width: 767px) {
   .container {
