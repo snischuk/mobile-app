@@ -19,9 +19,10 @@
         <!-- #name -->
         <div class="row">
           <div class="column">
-            <h3 class="title" required>First name*</h3>
+            <label class="title" for="first-name" required>First name*</label>
             <input
               class="input"
+              id="first-name"
               type="text"
               name="fname"
               placeholder="enter your first name"
@@ -29,9 +30,10 @@
             />
           </div>
           <div class="column">
-            <h3 class="title">Last name</h3>
+            <label class="title" for="last-name">Last name</label>
             <input
               class="input"
+              id="last-name"
               type="text"
               name="lname"
               placeholder="enter your last name"
@@ -40,9 +42,10 @@
         </div>
         <!-- #email -->
         <div class="column">
-          <h3 class="title">Email*</h3>
+          <label class="title" for="email">Email*</label>
           <input
             class="input"
+            id="email"
             type="email"
             name="email"
             placeholder="enter your email"
@@ -52,18 +55,20 @@
         <!-- #password -->
         <div class="row">
           <div class="column">
-            <h3 class="title">Password*</h3>
+            <label class="title" for="password">Password*</label>
             <input
               class="input"
+              id="password"
               type="password"
               placeholder="enter your password"
               required
             />
           </div>
           <div class="column">
-            <h3 class="title">Confirm Password*</h3>
+            <label class="title" for="password-repeat">Confirm Password*</label>
             <input
               class="input"
+              id="password-repeat"
               type="password"
               placeholder="enter your password again"
               required
@@ -73,20 +78,22 @@
         <!-- #radio-checkbox -->
         <div class="row">
           <div class="column">
-            <h3 class="title">Gender</h3>
+            <p class="title">Gender</p>
             <div class="row radio-items">
-              <label class="label">
+              <label class="label" for="male">
                 <input
-                  type="radio"
                   class="radio-item"
+                  id="male"
+                  type="radio"
                   name="gender"
                   value="male"
                 />Male
               </label>
-              <label class="label">
+              <label class="label" for="female">
                 <input
-                  type="radio"
                   class="radio-item"
+                  id="female"
+                  type="radio"
                   name="gender"
                   value="female"
                 />Female
@@ -94,36 +101,40 @@
             </div>
           </div>
           <div class="column">
-            <h3 class="title">Hobbies</h3>
+            <p class="title">Hobbies</p>
             <div class="row checkbox-items">
-              <label class="label">
+              <label class="label" for="music">
                 <input
-                  type="checkbox"
                   class="checkbox-item"
+                  id="music"
+                  type="checkbox"
                   name="hobby"
                   value="music"
                 />Music
               </label>
-              <label class="label">
+              <label class="label" for="sports">
                 <input
-                  type="checkbox"
                   class="checkbox-item"
+                  id="sports"
+                  type="checkbox"
                   name="hobby"
                   value="sports"
                 />Sports
               </label>
-              <label class="label">
+              <label class="label" for="travel">
                 <input
-                  type="checkbox"
                   class="checkbox-item"
+                  id="travel"
+                  type="checkbox"
                   name="hobby"
                   value="travel"
                 />Travel
               </label>
-              <label class="label">
+              <label class="label" for="movies">
                 <input
-                  type="checkbox"
                   class="checkbox-item"
+                  id="movies"
+                  type="checkbox"
                   name="hobby"
                   value="movies"
                 />Movies
@@ -134,7 +145,7 @@
         <!-- #select-range -->
         <div class="row">
           <div class="column">
-            <h3 class="title">Source of Income</h3>
+            <p class="title">Source of Income</p>
             <select class="select" name="income-source">
               <option value="employed">Employed</option>
               <option value="self">Self-employed</option>
@@ -143,9 +154,14 @@
           </div>
 
           <div class="column">
-            <h3 class="title">Income</h3>
+            <label class="title" for="income">Income</label>
             <div class="row">
-              <input class="range-input" type="range" name="income" />
+              <input
+                class="range-input"
+                id="income"
+                type="range"
+                name="income"
+              />
               <span class="range-counter">20K</span>
             </div>
           </div>
@@ -153,19 +169,26 @@
         <!-- #file-number -->
         <div class="row">
           <div class="column">
-            <h3 class="title">Upload Profile Picture</h3>
-            <input class="file" type="file" accept="image/*" />
+            <label class="title" for="file">Upload Profile Picture</label>
+            <input class="file" id="file" type="file" accept="image/*" />
           </div>
 
           <div class="column">
-            <h3 class="title">Age</h3>
-            <input class="number" type="number" min="5" max="120" value="18" />
+            <label class="title" for="age">Age</label>
+            <input
+              class="number"
+              id="age"
+              type="number"
+              min="5"
+              max="120"
+              value="18"
+            />
           </div>
         </div>
         <!-- #textarea -->
         <div class="column">
-          <h3 class="title">Bio</h3>
-          <textarea class="textarea" rows="5" cols="10"></textarea>
+          <label class="title" for="bio">Bio</label>
+          <textarea class="textarea" id="bio" rows="5" cols="10"></textarea>
         </div>
       </div>
 
