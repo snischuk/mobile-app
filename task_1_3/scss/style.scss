@@ -8,7 +8,11 @@ $color-white: #ffffff;
 %font-family {
   font-family: "Roboto", Verdana, sans-serif;
 }
-
+@mixin font($color, $size, $lineheight) {
+  color: $color;
+  font-size: $size;
+  line-height: $lineheight;
+}
 * {
   margin: 0;
   padding: 0;
@@ -35,30 +39,19 @@ body {
   display: flex;
   flex-direction: column;
 
-  // font-family: "Roboto", Verdana, sans-serif;
-  // font-size: 1.6rem;
-  // line-height: 2.2rem;
-
   overflow: hidden;
   border: 1px solid $color-grey-silver;
   border-radius: 20px;
 }
 
 .header {
-  // font-size: 2.8rem;
-  // line-height: 3rem;
-  // color: $color-grey-dark;
-
   text-align: center;
   background-color: $color-grey-light;
   border-bottom: 1px solid $color-grey-silver;
   padding: 20px;
 
-  // font-family: "Roboto", Verdana, sans-serif;
   @extend %font-family;
-  color: $color-grey-dark;
-  font-size: 2.8rem;
-  line-height: 3rem;
+  @include font($color-grey-dark, 2.8rem, 3rem);
 }
 .body {
   background-color: $color-white;
@@ -78,14 +71,10 @@ body {
   margin-bottom: 15px;
 }
 .input-title {
-  // color: $color-green;
   font-weight: bold;
 
-  // font-family: "Roboto", Verdana, sans-serif;
   @extend %font-family;
-  color: $color-green;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+  @include font($color-green, 1.6rem, 2.2rem);
 }
 .input-field {
   width: 100%;
@@ -93,12 +82,8 @@ body {
   border: 1px solid $color-grey-silver;
   border-radius: 5px;
 
-  // font-family: "Roboto", Verdana, sans-serif;
   @extend %font-family;
-  color: $color-grey-dark;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
-
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
   &::placeholder {
     color: $color-grey;
   }
@@ -111,30 +96,21 @@ body {
   cursor: pointer;
 }
 .label {
-  // color: $color-grey-dark;
   cursor: pointer;
 
-  // font-family: "Roboto", Verdana, sans-serif;
   @extend %font-family;
-  color: $color-grey-dark;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
 }
 
 .select {
   height: 3.6rem;
-
   cursor: pointer;
   padding: 0 10px;
-
   border: 1px solid $color-grey-silver;
   border-radius: 5px;
 
-  // font-family: "Roboto", Verdana, sans-serif;
   @extend %font-family;
-  color: $color-grey-dark;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
 }
 
 .input-range {
@@ -144,55 +120,37 @@ body {
 }
 .input-range-counter {
   padding: 10px 5px;
-  // color: $color-white;
   background-color: $color-green;
   border-radius: 5px;
 
-  // font-family: "Roboto", Verdana, sans-serif;
   @extend %font-family;
-  color: $color-white;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
 }
 .input-file {
   width: 100%;
   cursor: pointer;
-  // color: $color-grey-dark;
   border: none;
   padding: 2px 10px;
 
-  // font-family: "Roboto", Verdana, sans-serif;
   @extend %font-family;
-  color: $color-grey-dark;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
 }
 .input-number {
-  // font-size: 1.6rem;
-  // line-height: 2.2rem;
-  // color: $color-grey-dark;
   border: 1px solid $color-grey-silver;
   border-radius: 5px;
   padding: 5px 10px;
 
-  // font-family: "Roboto", Verdana, sans-serif;
   @extend %font-family;
-  color: $color-grey-dark;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
 }
 .textarea {
-  // color: $color-grey-dark;
   resize: vertical;
   border: 1px solid $color-grey-silver;
   border-radius: 5px;
   padding: 5px 10px;
 
-  // font-family: "Roboto", Verdana, sans-serif;
   @extend %font-family;
-  color: $color-grey-dark;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
 
   &::placeholder {
     color: $color-grey;
@@ -202,7 +160,6 @@ body {
 .footer {
   background-color: $color-grey-light;
   border-top: 1px solid $color-grey-silver;
-
   padding: 15px 60px 0;
 }
 .flex-end {
@@ -210,17 +167,13 @@ body {
 }
 .footer__btn {
   cursor: pointer;
-  // color: $color-white;
   background-color: $color-green;
-  // font-size: 1.8rem;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
 
-  font-family: "Roboto", Verdana, sans-serif;
-  color: $color-white;
-  font-size: 1.8rem;
-  line-height: 2.4rem;
+  @extend %font-family;
+  @include font($color-white, 1.8rem, 2.4rem);
 }
 @media (max-width: 767px) {
   .container {
