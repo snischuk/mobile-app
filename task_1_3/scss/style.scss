@@ -26,7 +26,7 @@ body {
 }
 
 .create {
-  min-width: 700px;
+  min-width: 320px;
   max-width: 768px;
   min-height: 100vh;
   display: flex;
@@ -68,6 +68,7 @@ body {
   font-weight: bold;
 }
 .input {
+  width: 100%;
   padding: 5px 10px;
   border: 1px solid $color-grey-silver;
   border-radius: 5px;
@@ -79,6 +80,8 @@ body {
   }
 }
 .radio-items {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
 }
 .label {
@@ -89,6 +92,8 @@ body {
   cursor: pointer;
 }
 .checkbox-items {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 .checkbox-item {
@@ -108,10 +113,14 @@ body {
     font-size: 1.6rem;
   }
 }
-
+.range-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .range-input {
   cursor: pointer;
-  width: 82%;
+  width: 100%;
   accent-color: $color-green;
 }
 .range-counter {
@@ -121,6 +130,7 @@ body {
   border-radius: 5px;
 }
 .file {
+  width: 100%;
   cursor: pointer;
   color: $color-grey-dark;
   border: none;
@@ -170,8 +180,14 @@ body {
   border-radius: 5px;
   padding: 10px 20px;
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .body {
     padding: 15px 20px;
+  }
+  .footer {
+    padding: 15px 20px 0;
+  }
+  .row {
+    flex-direction: column;
   }
 }
