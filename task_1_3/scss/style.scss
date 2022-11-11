@@ -26,13 +26,13 @@ body {
 }
 
 .create {
-  min-width: 70rem;
-  max-width: 76.8rem;
+  min-width: 700px;
+  max-width: 768px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 30px;
 }
 .header {
   font-size: 2.8rem;
@@ -40,15 +40,15 @@ body {
   color: $color-grey-dark;
   text-align: center;
   background-color: $color-grey-light;
-  border-bottom: 0.1rem solid $color-grey-silver;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  padding: 2rem;
+  border-bottom: 1px solid $color-grey-silver;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 20px;
 }
 .body {
   flex-grow: 1;
   background-color: $color-white;
-  padding: 2.5rem 6rem;
+  padding: 25px 60px;
 }
 
 .row {
@@ -61,16 +61,16 @@ body {
   flex-direction: column;
   justify-content: space-between;
   flex-basis: 49%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 15px;
 }
 .title {
   color: $color-green;
   font-weight: bold;
 }
 .input {
-  padding: 0.5rem 1rem;
-  border: 0.1rem solid $color-grey-silver;
-  border-radius: 0.5rem;
+  padding: 5px 10px;
+  border: 1px solid $color-grey-silver;
+  border-radius: 5px;
 
   &::placeholder {
     font-family: "Roboto", Verdana, sans-serif;
@@ -85,7 +85,7 @@ body {
   color: $color-grey-dark;
 }
 .radio-item {
-  margin: 0 0.5rem;
+  margin: 0 5px;
   cursor: pointer;
 }
 .checkbox-items {
@@ -93,14 +93,14 @@ body {
 }
 .checkbox-item {
   cursor: pointer;
-  margin: 0 0.2rem 0;
+  margin: 0 2px 0;
 }
 .select {
   cursor: pointer;
-  padding: 0.5rem 1rem;
+  padding: 5px 10px;
   color: $color-grey-dark;
-  border: 0.1rem solid $color-grey-silver;
-  border-radius: 0.5rem;
+  border: 1px solid $color-grey-silver;
+  border-radius: 5px;
 
   &::placeholder {
     font-family: "Roboto", Verdana, sans-serif;
@@ -115,22 +115,22 @@ body {
   accent-color: $color-green;
 }
 .range-counter {
-  padding: 1rem 0.5rem;
+  padding: 10px 5px;
   color: $color-white;
   background-color: $color-green;
-  border-radius: 0.5rem;
+  border-radius: 5px;
 }
 .file {
   cursor: pointer;
   color: $color-grey-dark;
   border: none;
-  padding: 0.2rem 1rem;
+  padding: 2px 10px;
 }
 .number {
   color: $color-grey-dark;
-  border: 0.1rem solid $color-grey-silver;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
+  border: 1px solid $color-grey-silver;
+  border-radius: 5px;
+  padding: 5px 10px;
 
   &::placeholder {
     font-family: "Roboto", Verdana, sans-serif;
@@ -141,9 +141,9 @@ body {
 .textarea {
   color: $color-grey-dark;
   resize: vertical;
-  border: 0.1rem solid $color-grey-silver;
+  border: 1px solid $color-grey-silver;
   border-radius: 5px;
-  padding: 0.5rem 1rem;
+  padding: 5px 10px;
 
   &::placeholder {
     font-family: "Roboto", Verdana, sans-serif;
@@ -153,10 +153,10 @@ body {
 }
 .footer {
   background-color: $color-grey-light;
-  border-top: 0.1rem solid $color-grey-silver;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-  padding: 1.5rem 6rem 0;
+  border-top: 1px solid $color-grey-silver;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 15px 60px 0;
 }
 .flex-end {
   align-items: flex-end;
@@ -167,11 +167,11 @@ body {
   background-color: $color-green;
   font-size: 1.8rem;
   border: none;
-  border-radius: 0.5rem;
-  padding: 1rem 2rem;
+  border-radius: 5px;
+  padding: 10px 20px;
 }
 @media (max-width: 425px) {
   .body {
-    padding: 1.5rem 2rem;
+    padding: 15px 20px;
   }
 }
