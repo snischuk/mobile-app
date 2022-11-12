@@ -1,10 +1,18 @@
-$color-grey-dark: #6c6c6c;
-$color-grey-light: #eff0f1;
-$color-green: #54bc95;
-$color-white: #ffffff;
-$color-placeholder: #dadbdb;
+$color-primary: #54bc95;
+$color-secondary: #6c6c6c;
 $color-border: #cdcdcd;
-$color-input-border: #cdcdcd;
+
+%font-family {
+  font-family: "Roboto", Verdana, sans-serif;
+}
+@mixin font($color, $size, $lineheight) {
+  color: $color;
+  font-size: $size;
+  line-height: $lineheight;
+}
+@mixin bordered($color) {
+  border: 1px solid $color;
+}
 
 * {
   margin: 0;
@@ -15,8 +23,6 @@ html {
   font-size: 10px;
 }
 body {
-  font-size: 1.6rem;
-  font-family: "Roboto", Verdana, sans-serif;
   background: linear-gradient(
     to right,
     #547f91 0%,
@@ -25,31 +31,31 @@ body {
     #547f91 100%
   );
 }
-
+.container {
+  max-width: 768px;
+  padding: 30px;
+  margin: 0 auto;
+}
 .create {
-  min-width: 70rem;
-  max-width: 76.8rem;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  padding: 3rem;
+  overflow: hidden;
+  border-radius: 20px;
+  @include bordered($color-border);
 }
+
 .header {
-  font-size: 2.8rem;
-  line-height: 3rem;
-  color: $color-grey-dark;
   text-align: center;
-  background-color: $color-grey-light;
-  border-bottom: 0.1rem solid $color-border;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  padding: 2rem;
+  background-color: #eff0f1;
+  padding: 20px;
+
+  @extend %font-family;
+  @include font($color-secondary, 2.8rem, 3rem);
+  @include bordered($color-border);
 }
 .body {
-  flex-grow: 1;
-  background-color: $color-white;
-  padding: 2.5rem 6rem;
+  background-color: #ffffff;
+  padding: 25px 60px;
 }
 
 .row {
@@ -57,117 +63,144 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
-.column {
+.column-2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-basis: 49%;
-  margin-bottom: 1.5rem;
+  flex-basis: 49%; // need 50%?
+  margin-bottom: 15px;
 }
-.title {
-  color: $color-green;
+.input-title {
+  font-weight: bold;
+
+  @extend %font-family;
+  @include font($color-primary, 1.6rem, 2.2rem);
 }
-.input {
-  padding: 0.5rem 1rem;
-  border: 0.1rem solid $color-input-border;
-  border-radius: 0.5rem;
+.input-field {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  @extend %font-family;
+  @include font($color-secondary, 1.6rem, 2.2rem);
+  @include bordered($color-border);
+
   &::placeholder {
-    font-family: "Roboto", Verdana, sans-serif;
-    color: $color-placeholder;
-    font-size: 1.6rem;
+    color: #dadbdb;
   }
 }
-.radio-items {
+.group-items {
   justify-content: flex-start;
 }
+.item {
+  margin: 0 5px;
+  cursor: pointer;
+}
 .label {
-  color: $color-grey-dark;
-}
-.radio-item {
-  margin: 0 0.5rem;
   cursor: pointer;
+
+  @extend %font-family;
+  @include font($color-secondary, 1.6rem, 2.2rem);
 }
-.checkbox-items {
-  justify-content: space-around;
-}
-.checkbox-item {
-  cursor: pointer;
-  margin: 0 0.2rem 0;
-}
+
 .select {
+  padding: 0 10px;
+  height: 3.6rem;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  color: $color-grey-dark;
-  border: 0.1rem solid $color-input-border;
-  border-radius: 0.5rem;
+  border-radius: 5px;
+
+  @include bordered($color-border);
+  @extend %font-family;
+  @include font($color-secondary, 1.6rem, 2.2rem);
+}
+
+.range-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.input-range {
+  cursor: pointer;
+  width: 85%; // need width: 100%?
+  accent-color: $color-primary;
+}
+.input-range-counter {
+  padding: 10px 5px;
+  background-color: $color-primary;
+  border-radius: 5px;
+
+  @extend %font-family;
+  @include font(#ffffff, 1.6rem, 2.2rem);
+}
+.input-file {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  padding: 2px 10px;
+
+  @extend %font-family;
+  @include font($color-secondary, 1.6rem, 2.2rem);
+}
+.input-number {
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  @extend %font-family;
+  @include font($color-secondary, 1.6rem, 2.2rem);
+  @include bordered($color-border);
+}
+.textarea {
+  padding: 5px 10px;
+  resize: vertical;
+  border-radius: 5px;
+
+  @extend %font-family;
+  @include font($color-secondary, 1.6rem, 2.2rem);
+  @include bordered($color-border);
+
   &::placeholder {
-    font-family: "Roboto", Verdana, sans-serif;
-    color: $color-placeholder;
-    font-size: 1.6rem;
+    color: #dadbdb;
   }
 }
 
-.range-input {
-  cursor: pointer;
-  width: 82%;
-  accent-color: $color-green;
-}
-.range-counter {
-  padding: 1rem 0.5rem;
-  color: $color-white;
-  background-color: $color-green;
-  border-radius: 0.5rem;
-}
-.file {
-  cursor: pointer;
-  color: $color-grey-dark;
-  border: none;
-  padding: 0.2rem 1rem;
-}
-.number {
-  color: $color-grey-dark;
-  border: 0.1rem solid $color-input-border;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  &::placeholder {
-    font-family: "Roboto", Verdana, sans-serif;
-    color: $color-placeholder;
-    font-size: 1.6rem;
-  }
-}
-.textarea {
-  color: $color-grey-dark;
-  resize: vertical;
-  border: 0.1rem solid $color-input-border;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  &::placeholder {
-    font-family: "Roboto", Verdana, sans-serif;
-    color: $color-placeholder;
-    font-size: 1.6rem;
-  }
-}
 .footer {
-  background-color: $color-grey-light;
-  border-top: 0.1rem solid $color-border;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-  padding: 1.5rem 6rem 0;
+  padding: 15px 60px 0;
+  background-color: #eff0f1;
+
+  @include bordered($color-border);
 }
 .flex-end {
   align-items: flex-end;
 }
-.footer__btn {
+.footer-btn {
+  padding: 10px 20px;
   cursor: pointer;
-  color: $color-white;
-  background-color: $color-green;
-  font-size: 1.8rem;
+  background-color: $color-primary;
   border: none;
-  border-radius: 0.5rem;
-  padding: 1rem 2rem;
+  border-radius: 5px;
+
+  @extend %font-family;
+  @include font(#a3eedc, 1.8rem, 2.4rem);
 }
-@media (max-width: 425px) {
+@media (max-width: 767px) {
+  .container {
+    min-width: 320px;
+  }
+
   .body {
-    padding: 1.5rem 2rem;
+    padding: 15px 20px;
+  }
+  .footer {
+    padding: 15px 20px 0;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .row-range {
+    display: flex;
+    flex-direction: row;
+  }
+  .input-range {
+    width: 100%;
   }
 }
