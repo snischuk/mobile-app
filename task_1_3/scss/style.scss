@@ -67,7 +67,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-basis: 49%;
+  flex-basis: 49%; // need 50%?
   margin-bottom: 15px;
 }
 .input-title {
@@ -114,9 +114,14 @@ body {
   @include font($color-secondary, 1.6rem, 2.2rem);
 }
 
+.range-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .input-range {
   cursor: pointer;
-  width: 100%;
+  width: 85%; // need width: 100%?
   accent-color: $color-primary;
 }
 .input-range-counter {
@@ -181,6 +186,7 @@ body {
   .container {
     min-width: 320px;
   }
+
   .body {
     padding: 15px 20px;
   }
@@ -189,5 +195,12 @@ body {
   }
   .row {
     flex-direction: column;
+  }
+  .row-range {
+    display: flex;
+    flex-direction: row;
+  }
+  .input-range {
+    width: 100%;
   }
 }
