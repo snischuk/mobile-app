@@ -63,7 +63,7 @@ body {
   border-radius: 20px;
 }
 
-.header {
+.create__header {
   @extend %font-family;
   @include font($color-grey-dark, 2.8rem, 3rem);
   @include bordered($color-grey-light);
@@ -73,7 +73,7 @@ body {
   padding: 20px;
 }
 
-.body {
+.create__body {
   @include media-mobile {
     padding: 15px 20px;
   }
@@ -243,7 +243,7 @@ body {
   }
 }
 
-.footer {
+.create__footer {
   @include bordered($color-grey-light);
   @include media-mobile {
     padding: 15px 20px 0;
