@@ -1,6 +1,6 @@
-$color-primary: #54bc95;
-$color-secondary: #6c6c6c;
-$color-border: #cdcdcd;
+$color-green: #54bc95;
+$color-grey-dark: #6c6c6c;
+$color-grey-light: #cdcdcd;
 
 %font-family {
   font-family: "Roboto", Verdana, sans-serif;
@@ -43,7 +43,7 @@ body {
 }
 
 .create {
-  @include bordered($color-border);
+  @include bordered($color-grey-light);
 
   display: flex;
   flex-direction: column;
@@ -53,8 +53,8 @@ body {
 
 .header {
   @extend %font-family;
-  @include font($color-secondary, 2.8rem, 3rem);
-  @include bordered($color-border);
+  @include font($color-grey-dark, 2.8rem, 3rem);
+  @include bordered($color-grey-light);
 
   text-align: center;
   background-color: #eff0f1;
@@ -82,15 +82,15 @@ body {
 
 .input-title {
   @extend %font-family;
-  @include font($color-primary, 1.6rem, 2.2rem);
+  @include font($color-green, 1.6rem, 2.2rem);
 
   font-weight: bold;
 }
 
 .input-field {
   @extend %font-family;
-  @include font($color-secondary, 1.6rem, 2.2rem);
-  @include bordered($color-border);
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
+  @include bordered($color-grey-light);
 
   width: 100%;
   padding: 5px 10px;
@@ -112,15 +112,15 @@ body {
 
 .label {
   @extend %font-family;
-  @include font($color-secondary, 1.6rem, 2.2rem);
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
 
   cursor: pointer;
 }
 
 .select {
   @extend %font-family;
-  @include font($color-secondary, 1.6rem, 2.2rem);
-  @include bordered($color-border);
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
+  @include bordered($color-grey-light);
 
   padding: 0 10px;
   height: 3.6rem;
@@ -137,7 +137,7 @@ body {
 .input-range {
   cursor: pointer;
   width: 85%; // need width: 100%?
-  accent-color: $color-primary;
+  accent-color: $color-green;
 }
 
 .input-range-counter {
@@ -145,13 +145,13 @@ body {
   @include font(#ffffff, 1.6rem, 2.2rem);
 
   padding: 10px 5px;
-  background-color: $color-primary;
+  background-color: $color-green;
   border-radius: 5px;
 }
 
 .input-file {
   @extend %font-family;
-  @include font($color-secondary, 1.6rem, 2.2rem);
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
 
   width: 100%;
   cursor: pointer;
@@ -161,8 +161,8 @@ body {
 
 .input-number {
   @extend %font-family;
-  @include font($color-secondary, 1.6rem, 2.2rem);
-  @include bordered($color-border);
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
+  @include bordered($color-grey-light);
 
   padding: 5px 10px;
   border-radius: 5px;
@@ -170,8 +170,8 @@ body {
 
 .textarea {
   @extend %font-family;
-  @include font($color-secondary, 1.6rem, 2.2rem);
-  @include bordered($color-border);
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
+  @include bordered($color-grey-light);
 
   padding: 5px 10px;
   resize: none;
@@ -183,7 +183,7 @@ body {
 }
 
 .footer {
-  @include bordered($color-border);
+  @include bordered($color-grey-light);
 
   padding: 15px 60px 0;
   background-color: #eff0f1;
@@ -199,7 +199,7 @@ body {
 
   padding: 10px 20px;
   cursor: pointer;
-  background-color: $color-primary;
+  background-color: $color-green;
   border: none;
   border-radius: 5px;
 }
