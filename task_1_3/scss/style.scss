@@ -40,6 +40,10 @@ body {
   max-width: 768px;
   padding: 30px;
   margin: 0 auto;
+
+  @media (max-width: 767px) {
+    min-width: 320px;
+  }
 }
 
 .create {
@@ -64,12 +68,20 @@ body {
 .body {
   background-color: #ffffff;
   padding: 25px 60px;
+
+  @media (max-width: 767px) {
+    padding: 15px 20px;
+  }
 }
 
 .row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 
 .column-2 {
@@ -138,6 +150,10 @@ body {
   cursor: pointer;
   width: 85%; // need width: 100%?
   accent-color: $color-green;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 }
 
 .input-range-counter {
@@ -187,6 +203,10 @@ body {
 
   padding: 15px 60px 0;
   background-color: #eff0f1;
+
+  @media (max-width: 767px) {
+    padding: 15px 20px 0;
+  }
 }
 
 .flex-end {
@@ -202,26 +222,4 @@ body {
   background-color: $color-green;
   border: none;
   border-radius: 5px;
-}
-
-@media (max-width: 767px) {
-  .container {
-    min-width: 320px;
-  }
-
-  .body {
-    padding: 15px 20px;
-  }
-
-  .footer {
-    padding: 15px 20px 0;
-  }
-
-  .row {
-    flex-direction: column;
-  }
-
-  .input-range {
-    width: 100%;
-  }
 }
