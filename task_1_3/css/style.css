@@ -23,21 +23,21 @@ body {
 }
 
 .create {
+  border: 1px solid #cdcdcd;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   border-radius: 20px;
-  border: 1px solid #cdcdcd;
 }
 
 .header {
-  text-align: center;
-  background-color: #eff0f1;
-  padding: 20px;
   color: #6c6c6c;
   font-size: 2.8rem;
   line-height: 3rem;
   border: 1px solid #cdcdcd;
+  text-align: center;
+  background-color: #eff0f1;
+  padding: 20px;
 }
 
 .body {
@@ -60,20 +60,20 @@ body {
 }
 
 .input-title {
-  font-weight: bold;
   color: #54bc95;
   font-size: 1.6rem;
   line-height: 2.2rem;
+  font-weight: bold;
 }
 
 .input-field {
-  width: 100%;
-  padding: 5px 10px;
-  border-radius: 5px;
   color: #6c6c6c;
   font-size: 1.6rem;
   line-height: 2.2rem;
   border: 1px solid #cdcdcd;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 .input-field::-moz-placeholder {
   color: #dadbdb;
@@ -95,62 +95,71 @@ body {
 }
 
 .label {
-  cursor: pointer;
   color: #6c6c6c;
   font-size: 1.6rem;
   line-height: 2.2rem;
+  cursor: pointer;
 }
 
 .select {
+  color: #6c6c6c;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  border: 1px solid #cdcdcd;
   padding: 0 10px;
   height: 3.6rem;
   cursor: pointer;
   border-radius: 5px;
-  border: 1px solid #cdcdcd;
-  color: #6c6c6c;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+}
+
+.row-range {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .input-range {
   cursor: pointer;
-  width: 100%;
+  width: 85%;
   accent-color: #54bc95;
 }
 
 .input-range-counter {
-  padding: 10px 5px;
-  background-color: #54bc95;
-  border-radius: 5px;
   color: #ffffff;
   font-size: 1.6rem;
   line-height: 2.2rem;
+  padding: 10px 5px;
+  background-color: #54bc95;
+  border-radius: 5px;
 }
 
 .input-file {
+  color: #6c6c6c;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
   width: 100%;
   cursor: pointer;
   border: none;
   padding: 2px 10px;
-  color: #6c6c6c;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
 }
 
 .input-number {
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: 1px solid #cdcdcd;
-}
-
-.textarea {
-  padding: 5px 10px;
-  resize: vertical;
-  border-radius: 5px;
   color: #6c6c6c;
   font-size: 1.6rem;
   line-height: 2.2rem;
   border: 1px solid #cdcdcd;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.textarea {
+  color: #6c6c6c;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  border: 1px solid #cdcdcd;
+  padding: 5px 10px;
+  resize: vertical;
+  border-radius: 5px;
 }
 .textarea::-moz-placeholder {
   color: #dadbdb;
@@ -163,9 +172,9 @@ body {
 }
 
 .footer {
+  border: 1px solid #cdcdcd;
   padding: 15px 60px 0;
   background-color: #eff0f1;
-  border: 1px solid #cdcdcd;
 }
 
 .flex-end {
@@ -173,14 +182,14 @@ body {
 }
 
 .footer-btn {
+  color: #a3eedc;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
   padding: 10px 20px;
   cursor: pointer;
   background-color: #54bc95;
   border: none;
   border-radius: 5px;
-  color: #a3eedc;
-  font-size: 1.8rem;
-  line-height: 2.4rem;
 }
 
 @media (max-width: 767px) {
@@ -195,5 +204,8 @@ body {
   }
   .row {
     flex-direction: column;
+  }
+  .input-range {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
