@@ -5,11 +5,13 @@ $color-border: #cdcdcd;
 %font-family {
   font-family: "Roboto", Verdana, sans-serif;
 }
+
 @mixin font($color, $size, $lineheight) {
   color: $color;
   font-size: $size;
   line-height: $lineheight;
 }
+
 @mixin bordered($color) {
   border: 1px solid $color;
 }
@@ -19,9 +21,11 @@ $color-border: #cdcdcd;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 10px;
 }
+
 body {
   background: linear-gradient(
     to right,
@@ -31,11 +35,13 @@ body {
     #547f91 100%
   );
 }
+
 .container {
   max-width: 768px;
   padding: 30px;
   margin: 0 auto;
 }
+
 .create {
   display: flex;
   flex-direction: column;
@@ -53,6 +59,7 @@ body {
   @include font($color-secondary, 2.8rem, 3rem);
   @include bordered($color-border);
 }
+
 .body {
   background-color: #ffffff;
   padding: 25px 60px;
@@ -63,6 +70,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .column-2 {
   display: flex;
   flex-direction: column;
@@ -70,12 +78,14 @@ body {
   flex-basis: 49%; // need 50%?
   margin-bottom: 15px;
 }
+
 .input-title {
   font-weight: bold;
 
   @extend %font-family;
   @include font($color-primary, 1.6rem, 2.2rem);
 }
+
 .input-field {
   width: 100%;
   padding: 5px 10px;
@@ -89,13 +99,16 @@ body {
     color: #dadbdb;
   }
 }
+
 .group-items {
   justify-content: flex-start;
 }
+
 .item {
   margin: 0 5px;
   cursor: pointer;
 }
+
 .label {
   cursor: pointer;
 
@@ -119,11 +132,13 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .input-range {
   cursor: pointer;
   width: 85%; // need width: 100%?
   accent-color: $color-primary;
 }
+
 .input-range-counter {
   padding: 10px 5px;
   background-color: $color-primary;
@@ -132,6 +147,7 @@ body {
   @extend %font-family;
   @include font(#ffffff, 1.6rem, 2.2rem);
 }
+
 .input-file {
   width: 100%;
   cursor: pointer;
@@ -141,6 +157,7 @@ body {
   @extend %font-family;
   @include font($color-secondary, 1.6rem, 2.2rem);
 }
+
 .input-number {
   padding: 5px 10px;
   border-radius: 5px;
@@ -149,6 +166,7 @@ body {
   @include font($color-secondary, 1.6rem, 2.2rem);
   @include bordered($color-border);
 }
+
 .textarea {
   padding: 5px 10px;
   resize: vertical;
@@ -169,9 +187,11 @@ body {
 
   @include bordered($color-border);
 }
+
 .flex-end {
   align-items: flex-end;
 }
+
 .footer-btn {
   padding: 10px 20px;
   cursor: pointer;
@@ -182,6 +202,7 @@ body {
   @extend %font-family;
   @include font(#a3eedc, 1.8rem, 2.4rem);
 }
+
 @media (max-width: 767px) {
   .container {
     min-width: 320px;
@@ -190,9 +211,11 @@ body {
   .body {
     padding: 15px 20px;
   }
+
   .footer {
     padding: 15px 20px 0;
   }
+
   .row {
     flex-direction: column;
   }
