@@ -114,7 +114,7 @@ body {
   @include font($color-secondary, 1.6rem, 2.2rem);
 }
 
-.range-row {
+.row-range {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -196,10 +196,7 @@ body {
   .row {
     flex-direction: column;
   }
-  .row-range {
-    display: flex;
-    flex-direction: row;
-  }
+
   .input-range {
     width: 100%;
   }
