@@ -2,6 +2,8 @@ $color-green: #54bc95;
 $color-grey-dark: #6c6c6c;
 $color-grey-light: #cdcdcd;
 
+$mobile-width: 767px;
+
 %font-family {
   font-family: "Roboto", Verdana, sans-serif;
 }
@@ -14,6 +16,12 @@ $color-grey-light: #cdcdcd;
 
 @mixin bordered($color) {
   border: 1px solid $color;
+}
+
+@mixin media-mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
 }
 
 * {
@@ -37,13 +45,13 @@ body {
 }
 
 .container {
+  @include media-mobile {
+    min-width: 320px;
+  }
+
   max-width: 768px;
   padding: 30px;
   margin: 0 auto;
-
-  @media (max-width: 767px) {
-    min-width: 320px;
-  }
 }
 
 .create {
@@ -66,22 +74,22 @@ body {
 }
 
 .body {
-  background-color: #ffffff;
-  padding: 25px 60px;
-
-  @media (max-width: 767px) {
+  @include media-mobile {
     padding: 15px 20px;
   }
+
+  background-color: #ffffff;
+  padding: 25px 60px;
 }
 
 .row {
+  @include media-mobile {
+    flex-direction: column;
+  }
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  @media (max-width: 767px) {
-    flex-direction: column;
-  }
 }
 
 .column-2 {
@@ -147,13 +155,13 @@ body {
 }
 
 .input-range {
+  @include media-mobile {
+    width: 100%;
+  }
+
   cursor: pointer;
   width: 85%; // need width: 100%?
   accent-color: $color-green;
-
-  @media (max-width: 767px) {
-    width: 100%;
-  }
 }
 
 .input-range-counter {
@@ -200,13 +208,12 @@ body {
 
 .footer {
   @include bordered($color-grey-light);
+  @include media-mobile {
+    padding: 15px 20px 0;
+  }
 
   padding: 15px 60px 0;
   background-color: #eff0f1;
-
-  @media (max-width: 767px) {
-    padding: 15px 20px 0;
-  }
 }
 
 .flex-end {
