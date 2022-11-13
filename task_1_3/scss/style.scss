@@ -119,6 +119,14 @@ body {
   &::placeholder {
     color: #dadbdb;
   }
+
+  &:hover {
+    border-color: $color-green;
+  }
+
+  &:focus {
+    outline-color: $color-green;
+  }
 }
 
 .group-items {
@@ -128,6 +136,7 @@ body {
 .item {
   margin: 0 5px;
   cursor: pointer;
+  accent-color: darkcyan;
 }
 
 .label {
@@ -135,6 +144,10 @@ body {
   @include font($color-grey-dark, 1.6rem, 2.2rem);
 
   cursor: pointer;
+
+  &:hover {
+    color: $color-green;
+  }
 }
 
 .select {
@@ -146,6 +159,14 @@ body {
   height: 3.6rem;
   cursor: pointer;
   border-radius: 5px;
+
+  &:hover {
+    border-color: $color-green;
+  }
+
+  &:focus {
+    outline-color: $color-green;
+  }
 }
 
 .row-range {
@@ -190,6 +211,14 @@ body {
 
   padding: 5px 10px;
   border-radius: 5px;
+
+  &:hover {
+    border-color: $color-green;
+  }
+
+  &:focus {
+    outline-color: $color-green;
+  }
 }
 
 .textarea {
@@ -203,6 +232,14 @@ body {
 
   &::placeholder {
     color: #dadbdb;
+  }
+
+  &:hover {
+    border-color: $color-green;
+  }
+
+  &:focus {
+    outline-color: $color-green;
   }
 }
 
@@ -229,4 +266,8 @@ body {
   background-color: $color-green;
   border: none;
   border-radius: 5px;
+
+  &:hover {
+    filter: brightness(110%);
+  }
 }
