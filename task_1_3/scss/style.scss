@@ -96,7 +96,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-basis: 49%; // need 50%?
+  flex-basis: 50%; // need 50%?
   margin-bottom: 15px;
 }
 
@@ -112,7 +112,8 @@ body {
   @include font($color-grey-dark, 1.6rem, 2.2rem);
   @include bordered($color-grey-light);
 
-  width: 100%;
+  width: calc(100% - 10px);
+  // width: 100%;
   padding: 5px 10px;
   border-radius: 5px;
 
@@ -156,6 +157,7 @@ body {
   @include bordered($color-grey-light);
 
   padding: 0 10px;
+  width: calc(100% - 10px);
   height: 3.6rem;
   cursor: pointer;
   border-radius: 5px;
@@ -181,7 +183,7 @@ body {
   }
 
   cursor: pointer;
-  width: 85%; // need width: 100%?
+  width: 85%;
   accent-color: $color-green;
 }
 
