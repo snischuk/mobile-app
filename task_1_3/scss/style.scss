@@ -96,7 +96,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-basis: 50%; // need 50%?
+  flex-basis: 50%;
   margin-bottom: 15px;
 }
 
@@ -113,7 +113,6 @@ body {
   @include bordered($color-grey-light);
 
   width: calc(100% - 10px);
-  // width: 100%;
   padding: 5px 10px;
   border-radius: 5px;
 
@@ -229,8 +228,9 @@ body {
   @include bordered($color-grey-light);
 
   padding: 5px 10px;
-  resize: none;
   border-radius: 5px;
+  resize: none;
+  min-height: 100px;
 
   &::placeholder {
     color: #dadbdb;
