@@ -1,17 +1,27 @@
-$color-primary: #54bc95;
-$color-secondary: #6c6c6c;
-$color-border: #cdcdcd;
+$color-green: #54bc95;
+$color-grey-dark: #6c6c6c;
+$color-grey-light: #cdcdcd;
+
+$mobile-width: 767px;
 
 %font-family {
   font-family: "Roboto", Verdana, sans-serif;
 }
+
 @mixin font($color, $size, $lineheight) {
   color: $color;
   font-size: $size;
   line-height: $lineheight;
 }
+
 @mixin bordered($color) {
   border: 1px solid $color;
+}
+
+@mixin media-mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
 }
 
 * {
@@ -19,9 +29,11 @@ $color-border: #cdcdcd;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 10px;
 }
+
 body {
   background: linear-gradient(
     to right,
@@ -31,176 +43,233 @@ body {
     #547f91 100%
   );
 }
+
 .container {
+  @include media-mobile {
+    min-width: 320px;
+  }
+
   max-width: 768px;
   padding: 30px;
   margin: 0 auto;
 }
+
 .create {
+  @include bordered($color-grey-light);
+
   display: flex;
   flex-direction: column;
   overflow: hidden;
   border-radius: 20px;
-  @include bordered($color-border);
 }
 
-.header {
+.create__header {
+  @extend %font-family;
+  @include font($color-grey-dark, 2.8rem, 3rem);
+  @include bordered($color-grey-light);
+
   text-align: center;
   background-color: #eff0f1;
   padding: 20px;
-
-  @extend %font-family;
-  @include font($color-secondary, 2.8rem, 3rem);
-  @include bordered($color-border);
 }
-.body {
+
+.create__body {
+  @include media-mobile {
+    padding: 15px 20px;
+  }
+
   background-color: #ffffff;
   padding: 25px 60px;
 }
 
 .row {
+  @include media-mobile {
+    flex-direction: column;
+  }
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .column-2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-basis: 49%; // need 50%?
+  flex-basis: 50%; // need 50%?
   margin-bottom: 15px;
 }
-.input-title {
-  font-weight: bold;
 
+.input-title {
   @extend %font-family;
-  @include font($color-primary, 1.6rem, 2.2rem);
+  @include font($color-green, 1.6rem, 2.2rem);
+
+  font-weight: bold;
 }
+
 .input-field {
-  width: 100%;
+  @extend %font-family;
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
+  @include bordered($color-grey-light);
+
+  width: calc(100% - 10px);
+  // width: 100%;
   padding: 5px 10px;
   border-radius: 5px;
-
-  @extend %font-family;
-  @include font($color-secondary, 1.6rem, 2.2rem);
-  @include bordered($color-border);
 
   &::placeholder {
     color: #dadbdb;
   }
+
+  &:hover {
+    border-color: $color-green;
+  }
+
+  &:focus {
+    outline-color: $color-green;
+  }
 }
+
 .group-items {
   justify-content: flex-start;
 }
+
 .item {
   margin: 0 5px;
   cursor: pointer;
+  accent-color: darkcyan;
 }
+
 .label {
+  @extend %font-family;
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
+
   cursor: pointer;
 
-  @extend %font-family;
-  @include font($color-secondary, 1.6rem, 2.2rem);
+  &:hover {
+    color: $color-green;
+  }
 }
 
 .select {
+  @extend %font-family;
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
+  @include bordered($color-grey-light);
+
   padding: 0 10px;
+  width: calc(100% - 10px);
   height: 3.6rem;
   cursor: pointer;
   border-radius: 5px;
 
-  @include bordered($color-border);
-  @extend %font-family;
-  @include font($color-secondary, 1.6rem, 2.2rem);
+  &:hover {
+    border-color: $color-green;
+  }
+
+  &:focus {
+    outline-color: $color-green;
+  }
 }
 
-.range-row {
+.row-range {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.input-range {
-  cursor: pointer;
-  width: 85%; // need width: 100%?
-  accent-color: $color-primary;
-}
-.input-range-counter {
-  padding: 10px 5px;
-  background-color: $color-primary;
-  border-radius: 5px;
 
+.input-range {
+  @include media-mobile {
+    width: 100%;
+  }
+
+  cursor: pointer;
+  width: 85%;
+  accent-color: $color-green;
+}
+
+.input-range-counter {
   @extend %font-family;
   @include font(#ffffff, 1.6rem, 2.2rem);
+
+  padding: 10px 5px;
+  background-color: $color-green;
+  border-radius: 5px;
 }
+
 .input-file {
+  @extend %font-family;
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
+
   width: 100%;
   cursor: pointer;
   border: none;
   padding: 2px 10px;
-
-  @extend %font-family;
-  @include font($color-secondary, 1.6rem, 2.2rem);
 }
+
 .input-number {
+  @extend %font-family;
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
+  @include bordered($color-grey-light);
+
   padding: 5px 10px;
   border-radius: 5px;
 
-  @extend %font-family;
-  @include font($color-secondary, 1.6rem, 2.2rem);
-  @include bordered($color-border);
+  &:hover {
+    border-color: $color-green;
+  }
+
+  &:focus {
+    outline-color: $color-green;
+  }
 }
-.textarea {
-  padding: 5px 10px;
-  resize: vertical;
-  border-radius: 5px;
 
+.textarea {
   @extend %font-family;
-  @include font($color-secondary, 1.6rem, 2.2rem);
-  @include bordered($color-border);
+  @include font($color-grey-dark, 1.6rem, 2.2rem);
+  @include bordered($color-grey-light);
+
+  padding: 5px 10px;
+  resize: none;
+  border-radius: 5px;
 
   &::placeholder {
     color: #dadbdb;
   }
+
+  &:hover {
+    border-color: $color-green;
+  }
+
+  &:focus {
+    outline-color: $color-green;
+  }
 }
 
-.footer {
+.create__footer {
+  @include bordered($color-grey-light);
+  @include media-mobile {
+    padding: 15px 20px 0;
+  }
+
   padding: 15px 60px 0;
   background-color: #eff0f1;
-
-  @include bordered($color-border);
 }
+
 .flex-end {
   align-items: flex-end;
 }
+
 .footer-btn {
+  @extend %font-family;
+  @include font(#a3eedc, 1.8rem, 2.4rem);
+
   padding: 10px 20px;
   cursor: pointer;
-  background-color: $color-primary;
+  background-color: $color-green;
   border: none;
   border-radius: 5px;
 
-  @extend %font-family;
-  @include font(#a3eedc, 1.8rem, 2.4rem);
-}
-@media (max-width: 767px) {
-  .container {
-    min-width: 320px;
-  }
-
-  .body {
-    padding: 15px 20px;
-  }
-  .footer {
-    padding: 15px 20px 0;
-  }
-  .row {
-    flex-direction: column;
-  }
-  .row-range {
-    display: flex;
-    flex-direction: row;
-  }
-  .input-range {
-    width: 100%;
+  &:hover {
+    filter: brightness(110%);
   }
 }
