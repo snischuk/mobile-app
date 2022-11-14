@@ -1,0 +1,9 @@
+.container {
+  @include media-mobile {
+    min-width: 320px;
+  }
+
+  max-width: 768px;
+  padding: 30px;
+  margin: 0 auto;
+}
