@@ -1,9 +1,8 @@
-@charset "UTF-8";
 .footer-btn, .textarea, .input-number, .input-file, .input-range-counter, .select, .label, .input-field, .input-title, .create__header {
   font-family: "Roboto", Verdana, sans-serif;
 }
 
-/*Обнуление*/
+/*reset*/
 * {
   padding: 0;
   margin: 0;
