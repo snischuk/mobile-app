@@ -10,20 +10,33 @@ body {
   display: flex;
 }
 
-.pacman > div {
+.pacman {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.pacman::before,
+.pacman::after {
+  content: "";
+  position: absolute;
   width: 50px;
   height: 25px;
   background-color: #ffff00;
 }
 
-.pacman-top {
+.pacman::before {
+  top: 0;
+  left: 0;
   border-radius: 50px 50px 0 0;
   transform-origin: center bottom;
   -webkit-animation: om-top 0.5s linear 0s infinite;
           animation: om-top 0.5s linear 0s infinite;
 }
 
-.pacman-bottom {
+.pacman::after {
+  bottom: 0;
+  left: 0;
   border-radius: 0 0 50px 50px;
   transform-origin: center top;
   -webkit-animation: om-bottom 0.5s linear 0s infinite;
@@ -37,9 +50,6 @@ body {
   50% {
     transform: rotate(-45deg);
   }
-  100% {
-    transform: rotate(0deg);
-  }
 }
 
 @keyframes om-top {
@@ -49,9 +59,6 @@ body {
   50% {
     transform: rotate(-45deg);
   }
-  100% {
-    transform: rotate(0deg);
-  }
 }
 @-webkit-keyframes om-bottom {
   0% {
@@ -59,9 +66,6 @@ body {
   }
   50% {
     transform: rotate(45deg);
-  }
-  100% {
-    transform: rotate(0deg);
   }
 }
 @keyframes om-bottom {
@@ -71,35 +75,71 @@ body {
   50% {
     transform: rotate(45deg);
   }
-  100% {
-    transform: rotate(0deg);
-  }
 }
-.pills {
+.pills-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
   width: 500px;
-  height: 50px;
   margin-left: -50px;
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3C!-- Created with Inkscape (http://www.inkscape.org/) --%3E%3Csvg width='50' height='10' viewBox='0 0 13.229166 2.6458333' version='1.1' id='svg5' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cdefs id='defs2' /%3E%3Cg id='layer1'%3E%3Ccircle style='fill:%23ffffff;stroke:none;stroke-width:1.32292;stroke-linejoin:round;paint-order:markers stroke fill' id='path234' cx='1.3229166' cy='1.3229166' r='1.3229166' /%3E%3C/g%3E%3C/svg%3E%0A");
-  background-position-y: center;
-  background-repeat: repeat no-repeat;
-  -webkit-animation: pills 0.5s linear 0.25s infinite;
-          animation: pills 0.5s linear 0.25s infinite;
+  overflow: hidden;
 }
 
-@-webkit-keyframes pills {
+.pill {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: azure;
+  position: absolute;
+  top: 45%;
+  right: 0;
+  margin-right: -20px;
+}
+
+.pill {
+  -webkit-animation: pill-move 2s linear infinite;
+          animation: pill-move 2s linear infinite;
+}
+
+.pill-1 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.pill-2 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.pill-3 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.pill-4 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.pill-5 {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+@-webkit-keyframes pill-move {
   from {
-    background-position-x: 0;
+    transform: translateX(0);
   }
   to {
-    background-position-x: -50px;
+    transform: translateX(-480px);
   }
 }
 
-@keyframes pills {
+@keyframes pill-move {
   from {
-    background-position-x: 0;
+    transform: translateX(0);
   }
   to {
-    background-position-x: -50px;
+    transform: translateX(-480px);
   }
 }/*# sourceMappingURL=index.css.map */
