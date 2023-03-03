@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 4em;
+  color: rgb(247 0 0 / 75%);
+}
+
+.parallax-wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+
+  .start-screen {
+    height: 100vh;
+    background-image: url("../img/winter.jpg");
+    @include bg;
+    @include align-center;
+  }
+
+  .end-screen {
+    height: 100vh;
+    background-image: url("../img/autumn.jpg");
+    @include bg;
+    @include align-center;
+  }
+
+  .parallax-group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+
+    .parallax-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      @include align-center;
+    }
+
+    .parallax-layer__base {
+      //scale = 1 + ((z-transform-value * -1) / perspective)
+      transform: translateZ(-297px) scale(2);
+    }
+
+    .parallax-layer__mid {
+      transform: translateZ(0);
+    }
+
+    .parallax-layer__top {
+      transform: translateZ(213px) scale(0.3);
+      background-image: url("../img/summer.jpg");
+      @include bg;
+    }
+  }
+}
+
+#start {
+  z-index: 0;
+}
+
+#end {
+  z-index: 0;
+}
+
+#group-1 {
+  z-index: -1;
+}
+
+#group-1 > .parallax-layer__base {
+  background-image: url("../img/spring.jpg");
+  @include bg;
+}
+
+#group-2 {
+  z-index: 0;
+}
+
+#group-2 > .parallax-layer__mid {
+  background-image: url("../img/summer.jpg");
+  @include bg;
+}
