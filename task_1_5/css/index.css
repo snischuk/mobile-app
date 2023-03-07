@@ -1,95 +1,58 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
-  font-size: 4em;
-  color: rgba(247, 0, 0, 0.75);
-}
-
-.parallax-wrapper {
+.wrapper {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  perspective: 300px;
+  perspective: 50px;
 }
-.parallax-wrapper .start-screen {
-  height: 100vh;
-  background-image: url("../img/winter.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.parallax-wrapper .end-screen {
-  height: 100vh;
-  background-image: url("../img/autumn.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.parallax-wrapper .parallax-group {
+
+.section {
   position: relative;
   height: 100vh;
   transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 15px 10px rgba(145, 145, 145, 0.5);
 }
-.parallax-wrapper .parallax-group .parallax-layer {
+
+.parallax::after {
+  content: " ";
   position: absolute;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.parallax-wrapper .parallax-group .parallax-layer__base {
-  transform: translateZ(-297px) scale(2);
-}
-.parallax-wrapper .parallax-group .parallax-layer__mid {
-  transform: translateZ(0);
-}
-.parallax-wrapper .parallax-group .parallax-layer__top {
-  transform: translateZ(213px) scale(0.3);
-  background-image: url("../img/summer.jpg");
+  bottom: 0;
+  left: 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-}
-
-#start {
-  z-index: 0;
-}
-
-#end {
-  z-index: 0;
-}
-
-#group-1 {
   z-index: -1;
+  transform: translateZ(10px) scale(1.2);
 }
 
-#group-1 > .parallax-layer__base {
+.bg-spring {
+  z-index: 1;
   background-image: url("../img/spring.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
 }
 
-#group-2 {
-  z-index: 0;
+.bg-winter::after {
+  background-image: url("../img/winter.jpg");
 }
 
-#group-2 > .parallax-layer__mid {
+.bg-summer::after {
   background-image: url("../img/summer.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+}
+
+.title {
+  font-family: sans-serif;
+  font-size: 2em;
+  color: white;
+  text-shadow: 0 0 5px #000;
+  padding: 20%;
+  transform: translateZ(15px) scale(1.1);
 }/*# sourceMappingURL=index.css.map */
