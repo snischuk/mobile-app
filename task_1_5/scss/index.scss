@@ -20,6 +20,14 @@
   justify-content: center;
 }
 
+.parallax-seasons h1 {
+  font-family: sans-serif;
+  font-size: 2em;
+  color: white;
+  text-shadow: 0 0 5px #000;
+  padding: 20px;
+}
+
 .parallax-bg {
   position: absolute;
   top: 0;
@@ -31,14 +39,24 @@
   background-size: cover;
   background-position: center center;
   box-shadow: 0px 0px 15px 10px rgb(145 145 145 / 50%);
-  transform: translateZ(10px) scale(1.2);
 }
 
-.parallax-seasons h1 {
-  font-family: sans-serif;
-  font-size: 2em;
-  color: white;
-  text-shadow: 0 0 5px #000;
-  padding: 20px;
-  transform: translateZ(15px) scale(1.1);
+.back-layer {
+  transform: translateZ(1px) scale(1);
+  z-index: -1;
+}
+
+.back-layer h1 {
+  transform: translateZ(3px) scale(2);
+  z-index: -1;
+}
+
+.front-layer {
+  transform: translateZ(5px) scale(1.1);
+  z-index: 1;
+}
+
+.front-layer h1 {
+  transform: translateZ(6px) scale(1.5);
+  z-index: 1;
 }
