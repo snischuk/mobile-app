@@ -4,55 +4,41 @@
   box-sizing: border-box;
 }
 
-.wrapper {
+.parallax-wrapper {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 50px;
 }
 
-.section {
+.parallax-seasons {
   position: relative;
   height: 100vh;
   transform-style: preserve-3d;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 15px 10px rgba(145, 145, 145, 0.5);
 }
 
-.parallax::after {
-  content: " ";
+.parallax-bg {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  z-index: -1;
+  box-shadow: 0px 0px 15px 10px rgba(145, 145, 145, 0.5);
   transform: translateZ(10px) scale(1.2);
 }
 
-.bg-spring {
-  z-index: 1;
-  background-image: url("../img/spring.jpg");
-}
-
-.bg-winter::after {
-  background-image: url("../img/winter.jpg");
-}
-
-.bg-summer::after {
-  background-image: url("../img/summer.jpg");
-}
-
-.title {
+.parallax-seasons h1 {
   font-family: sans-serif;
   font-size: 2em;
   color: white;
   text-shadow: 0 0 5px #000;
-  padding: 20%;
+  padding: 20px;
   transform: translateZ(15px) scale(1.1);
 }/*# sourceMappingURL=index.css.map */
