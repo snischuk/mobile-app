@@ -4,55 +4,59 @@
   box-sizing: border-box;
 }
 
-.wrapper {
+.parallax-wrapper {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 50px;
 }
 
-.section {
+.parallax-seasons {
   position: relative;
   height: 100vh;
   transform-style: preserve-3d;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 15px 10px rgba(145, 145, 145, 0.5);
 }
 
-.parallax::after {
-  content: " ";
+.parallax-seasons h1 {
+  font-family: sans-serif;
+  font-size: 2em;
+  color: white;
+  text-shadow: 0 0 5px #000;
+  padding: 20px;
+}
+
+.parallax-bg {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  box-shadow: 0px 0px 15px 10px rgba(145, 145, 145, 0.5);
+}
+
+.back-layer {
+  transform: translateZ(1px) scale(1);
   z-index: -1;
-  transform: translateZ(10px) scale(1.2);
 }
 
-.bg-spring {
+.back-layer h1 {
+  transform: translateZ(3px) scale(2);
+  z-index: -1;
+}
+
+.front-layer {
+  transform: translateZ(5px) scale(1.1);
   z-index: 1;
-  background-image: url("../img/spring.jpg");
 }
 
-.bg-winter::after {
-  background-image: url("../img/winter.jpg");
-}
-
-.bg-summer::after {
-  background-image: url("../img/summer.jpg");
-}
-
-.title {
-  font-family: sans-serif;
-  font-size: 2em;
-  color: white;
-  text-shadow: 0 0 5px #000;
-  padding: 20%;
-  transform: translateZ(15px) scale(1.1);
+.front-layer h1 {
+  transform: translateZ(6px) scale(1.5);
+  z-index: 1;
 }/*# sourceMappingURL=index.css.map */
