@@ -18,6 +18,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0px 0px 15px 10px rgb(145 145 145 / 50%);
 }
 
 .parallax-seasons h1 {
@@ -26,19 +30,6 @@
   color: white;
   text-shadow: 0 0 5px #000;
   padding: 20px;
-}
-
-.parallax-bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  box-shadow: 0px 0px 15px 10px rgb(145 145 145 / 50%);
 }
 
 .back-layer {
