@@ -69,15 +69,17 @@ p {
 
 @media (max-width: 767px) {
   nav {
-    width: 100%;
-    position: relative;
-    border-bottom: 2px solid #b1b1b1;
+    width: 120px;
+  }
+  a,
+p {
+    padding: 5px;
   }
   main {
-    padding: 15px 0;
+    padding: 0 5px 0 130px;
   }
   section {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   section:last-child {
     margin-bottom: 0;
