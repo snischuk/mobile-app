@@ -143,4 +143,10 @@ input {
 #switch-4:checked ~ .label-wrapper label:nth-of-type(4),
 #switch-5:checked ~ .label-wrapper label:nth-of-type(5) {
   background-color: rgb(82, 173, 252);
+}
+
+@media (max-width: 767px) {
+  .content {
+    width: 70%;
+  }
 }/*# sourceMappingURL=index.css.map */
