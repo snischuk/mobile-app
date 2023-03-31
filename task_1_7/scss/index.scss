@@ -29,8 +29,8 @@ p {
 
 .slider {
   position: relative;
-  width: 800px;
-  height: 500px;
+  width: 100vw;
+  height: 100vh;
 }
 
 input {
@@ -65,7 +65,7 @@ input {
   display: flex;
   flex-direction: row;
   position: absolute;
-  bottom: 15%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 99;
