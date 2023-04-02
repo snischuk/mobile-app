@@ -46,7 +46,7 @@ input {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 0;
 }
 
 .content {
@@ -138,7 +138,7 @@ input {
 #switch-3:checked ~ #three,
 #switch-4:checked ~ #four,
 #switch-5:checked ~ #five {
-  z-index: 2;
+  z-index: 3;
   animation: right-to-left 0.5s ease-in-out;
 }
 
@@ -148,6 +148,23 @@ input {
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+#switch-1:not(:checked) ~ #one,
+#switch-2:not(:checked) ~ #two,
+#switch-3:not(:checked) ~ #three,
+#switch-4:not(:checked) ~ #four,
+#switch-5:not(:checked) ~ #five {
+  animation: hidden 0.5s ease-in-out;
+}
+
+@keyframes hidden {
+  0% {
+    z-index: 2;
+  }
+  100% {
+    z-index: 2;
   }
 }
 
