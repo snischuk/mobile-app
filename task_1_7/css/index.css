@@ -2,7 +2,6 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-color: grey;
   margin: 0;
 }
 
@@ -18,6 +17,8 @@ body {
 img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 input,
@@ -28,8 +29,9 @@ p {
 
 .slider {
   position: relative;
-  width: 800px;
-  height: 500px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 input {
@@ -42,15 +44,14 @@ input {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 0;
 }
 
 .content {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 120px;
-  z-index: 1;
+  bottom: 30%;
   text-align: center;
   font-family: sans-serif;
   font-size: 20px;
@@ -62,7 +63,7 @@ input {
   display: flex;
   flex-direction: row;
   position: absolute;
-  bottom: 15%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 99;
@@ -97,7 +98,6 @@ input {
   top: 0;
   width: 15%;
   height: 100%;
-  background-color: brown;
   cursor: pointer;
   transition: opacity 0.5s ease-in-out;
 }
@@ -132,15 +132,64 @@ input {
 #switch-3:checked ~ #three,
 #switch-4:checked ~ #four,
 #switch-5:checked ~ #five {
-  z-index: 2;
-  transition: opacity 1s ease-in-out;
-  opacity: 1;
+  z-index: 3;
+  -webkit-animation: right-to-left 0.5s ease-in-out;
+          animation: right-to-left 0.5s ease-in-out;
 }
 
+@-webkit-keyframes right-to-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes right-to-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#switch-1:not(:checked) ~ #one,
+#switch-2:not(:checked) ~ #two,
+#switch-3:not(:checked) ~ #three,
+#switch-4:not(:checked) ~ #four,
+#switch-5:not(:checked) ~ #five {
+  -webkit-animation: hidden 0.5s ease-in-out;
+          animation: hidden 0.5s ease-in-out;
+}
+
+@-webkit-keyframes hidden {
+  0% {
+    z-index: 2;
+  }
+  100% {
+    z-index: 2;
+  }
+}
+
+@keyframes hidden {
+  0% {
+    z-index: 2;
+  }
+  100% {
+    z-index: 2;
+  }
+}
 #switch-1:checked ~ .label-wrapper label:nth-of-type(1),
 #switch-2:checked ~ .label-wrapper label:nth-of-type(2),
 #switch-3:checked ~ .label-wrapper label:nth-of-type(3),
 #switch-4:checked ~ .label-wrapper label:nth-of-type(4),
 #switch-5:checked ~ .label-wrapper label:nth-of-type(5) {
   background-color: rgb(82, 173, 252);
+}
+
+@media (max-width: 767px) {
+  .content {
+    width: 70%;
+  }
 }/*# sourceMappingURL=index.css.map */
