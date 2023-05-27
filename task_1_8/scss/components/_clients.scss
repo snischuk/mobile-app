@@ -1,0 +1,245 @@
+$slidesQuantity: 5;
+$slideWidth: calc(100% / $slidesQuantity);
+
+.clients {
+  padding-top: 90px;
+  padding-bottom: 50px;
+}
+
+.clients__title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.04; /* 27/26 */
+  color: $color-black;
+  text-align: center;
+}
+
+.clients__title:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.carousel-clients {
+  overflow: hidden;
+}
+
+.carousel-clients__track {
+  width: calc(100% * $slidesQuantity);
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.5s ease;
+}
+
+.carousel-clients__slide {
+  flex-basis: $slideWidth;
+  @include d-flex(column);
+  row-gap: 20px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.carousel-clients__column {
+  @include d-flex(column);
+
+  &--left {
+    position: relative;
+    min-height: 160px;
+    background-color: rgba($color-blue, 0.1);
+  }
+
+  &--right {
+    align-self: center;
+
+    position: relative;
+  }
+
+  &--right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 153px;
+    height: 153px;
+    display: block;
+    z-index: -1;
+    background: url("/img/square-of-dots.svg") no-repeat center / contain;
+  }
+}
+
+.carousel-clients__image {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  max-width: 180px;
+  padding: 0 15px;
+}
+
+.carousel-clients__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-clients__content {
+  position: relative;
+  max-width: 448px;
+  padding: 0 15px;
+  @include d-flex(column);
+  align-self: center;
+}
+
+.carousel-clients__quote-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(/img/clients/quote-icon.svg) no-repeat center / contain;
+}
+
+.carousel-clients__quote-icon:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.carousel-clients__quote-text {
+  font-size: 16px;
+  line-height: 1.5; /* 24/16 */
+  color: $color-black;
+}
+
+.carousel-clients__quote-text:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.carousel-clients__quote-author {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.06; /* 19/18 */
+  color: $color-black;
+}
+
+.carousel-clients__arrows-wrapper {
+  position: relative;
+  bottom: -10px;
+
+  @include d-flex(row);
+  align-self: flex-end;
+}
+
+.carousel-clients__arrow-btn {
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+
+  @include d-flex(row);
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+
+  @extend %transition;
+
+  &--left {
+    border-radius: 4px 0px 0px 4px;
+  }
+
+  &--right {
+    border-radius: 0px 4px 4px 0px;
+  }
+
+  &:hover {
+    background-color: $color-blue;
+
+    .carousel-clients__arrow-icon {
+      border-color: $color-white;
+    }
+  }
+}
+
+.carousel-clients__arrow-icon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-top: 7px solid $color-blue;
+  border-right: 7px solid $color-blue;
+  background: transparent;
+
+  &--left {
+    transform: rotateZ(225deg);
+  }
+
+  &--right {
+    transform: rotateZ(45deg);
+  }
+}
+
+@media ($tablet) {
+  .carousel-clients__slide {
+    width: 20%;
+    flex-direction: row;
+    column-gap: 6%; /* 86/1440 */
+    padding-top: 120px;
+    padding-bottom: 50px;
+  }
+
+  .carousel-clients__column {
+    flex: 0 0 calc(50% - 43px);
+
+    &--right {
+      align-self: flex-end;
+    }
+
+    &--left {
+      min-height: 400px;
+    }
+  }
+
+  .carousel-clients__image {
+    right: 14%; /* 100/677 */
+    transform: translateX(0);
+    max-width: 430px;
+  }
+
+  .carousel-clients__quote-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .carousel-clients__quote-icon:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .carousel-clients__quote-text:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .carousel-clients__arrows-wrapper {
+    bottom: -40px;
+  }
+}
+
+@media ($laptop) {
+  .clients {
+    padding-top: 150px;
+    padding-bottom: 20px;
+  }
+
+  .carousel-clients__content {
+    align-self: stretch;
+  }
+}
+
+#switch-1:checked ~ .carousel-clients__track {
+  transform: translateX(0%);
+}
+#switch-2:checked ~ .carousel-clients__track {
+  transform: translateX(-$slideWidth);
+}
+#switch-3:checked ~ .carousel-clients__track {
+  transform: translateX(-$slideWidth * 2);
+}
+#switch-4:checked ~ .carousel-clients__track {
+  transform: translateX(-$slideWidth * 3);
+}
+#switch-5:checked ~ .carousel-clients__track {
+  transform: translateX(-$slideWidth * 4);
+}
