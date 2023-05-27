@@ -1,6 +1,10 @@
 $slidesQuantity: 5;
 $slideWidth: calc(100% / $slidesQuantity);
 
+[name="slides"] {
+  display: none;
+}
+
 .clients {
   padding-top: 90px;
   padding-bottom: 50px;
