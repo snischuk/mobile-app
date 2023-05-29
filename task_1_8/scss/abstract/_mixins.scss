@@ -1,0 +1,10 @@
+@mixin wrapper($size) {
+  max-width: $size;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@mixin d-flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
