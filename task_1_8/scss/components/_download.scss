@@ -66,48 +66,6 @@
   object-fit: contain;
 }
 
-.decor {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.decor__item {
-  position: absolute;
-  width: 125px;
-  height: 100px;
-}
-
-.decor__item--download-1 {
-  bottom: -25px;
-  left: -32px;
-  background: url("../../img/decor-rect-blue-download.svg") no-repeat center /
-    contain;
-}
-
-.decor__item--download-2 {
-  bottom: -25px;
-  right: -32px;
-  background: url("../../img/decor-rect-brown-download.svg") no-repeat center /
-    contain;
-}
-
-.decor__item--what-1 {
-  top: 0;
-  right: -35px;
-  background: url("/img/decor-rect-blue-what.svg") no-repeat center / contain;
-}
-
-.decor__item--what-2 {
-  bottom: 0;
-  left: -35px;
-  background: url("/img/decor-rect-brown-what.svg") no-repeat center / contain;
-}
-
 @media ($tablet) {
   .download__container {
     flex-direction: row;
@@ -128,19 +86,6 @@
 
   .download__actions {
     column-gap: 28px;
-  }
-
-  .decor__item {
-    width: 255px;
-    height: 200px;
-  }
-  .decor__item--download-1 {
-    bottom: -50px;
-    left: -65px;
-  }
-  .decor__item--download-2 {
-    bottom: -50px;
-    right: -65px;
   }
 }
 

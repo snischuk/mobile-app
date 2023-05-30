@@ -95,21 +95,21 @@ h6 {
 
 @font-face {
   font-family: "Objective";
-  src: url("../../fonts/Objective-Regular.woff2"), url("../../fonts/Objective-Regular.woff");
+  src: url("../../fonts/Objective/Objective-Regular.woff2"), url("../../fonts/Objective/Objective-Regular.woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Objective";
-  src: url("../../fonts/Objective-Medium.woff2"), url("../../fonts/Objective-Medium.woff");
+  src: url("../../fonts/Objective/Objective-Medium.woff2"), url("../../fonts/Objective/Objective-Medium.woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Objective";
-  src: url("../../fonts/Objective-Bold.woff2"), url("../../fonts/Objective-Bold.woff");
+  src: url("../../fonts/Objective/Objective-Bold.woff2"), url("../../fonts/Objective/Objective-Bold.woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -137,6 +137,60 @@ body {
   flex: 1 1 auto;
 }
 
+.decor-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.decor__item {
+  position: absolute;
+  width: 125px;
+  height: 100px;
+}
+
+.decor__item--download-1 {
+  bottom: -25px;
+  left: -32px;
+  background: url("../../img/decor-rect-blue-download.svg") no-repeat center/contain;
+}
+
+.decor__item--download-2 {
+  bottom: -25px;
+  right: -32px;
+  background: url("../../img/decor-rect-brown-download.svg") no-repeat center/contain;
+}
+
+.decor__item--what-1 {
+  top: 0;
+  right: -35px;
+  background: url("/img/decor-rect-blue-what.svg") no-repeat center/contain;
+}
+
+.decor__item--what-2 {
+  bottom: 0;
+  left: -35px;
+  background: url("/img/decor-rect-brown-what.svg") no-repeat center/contain;
+}
+
+@media (min-width: 768px) {
+  .decor__item {
+    width: 255px;
+    height: 200px;
+  }
+  .decor__item--download-1 {
+    bottom: -50px;
+    left: -65px;
+  }
+  .decor__item--download-2 {
+    bottom: -50px;
+    right: -65px;
+  }
+}
 .header {
   position: fixed;
   top: 0;
@@ -353,7 +407,7 @@ body {
   margin-bottom: 15px;
 }
 
-.what__card {
+.card {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
@@ -361,38 +415,35 @@ body {
   padding: 15px;
   max-width: 410px;
   min-height: 480px;
+  background: rgb(255, 255, 255);
+  box-shadow: 5px 20px 50px rgba(74, 153, 211, 0.2);
+  border-radius: 10px;
 }
 
-.what__card::before {
+.card::before {
   content: "";
   position: absolute;
   width: 153px;
   height: 153px;
   display: block;
   z-index: -1;
-  background: url("/img/square-of-dots.svg") no-repeat center/contain;
+  background: url("/img/decor-square-of-dots.svg") no-repeat center/contain;
 }
 
-.what__card:nth-of-type(1)::before {
+.card:nth-of-type(1)::before {
   top: 50%;
   left: -30%;
   transform: translateY(-50%);
 }
 
-.what__card:nth-of-type(2)::before {
+.card:nth-of-type(2)::before {
   top: -14%;
   right: -21%;
 }
 
-.what__card:nth-of-type(3)::before {
+.card:nth-of-type(3)::before {
   bottom: -14%;
   right: -21%;
-}
-
-.card {
-  background: rgb(255, 255, 255);
-  box-shadow: 5px 20px 50px rgba(74, 153, 211, 0.2);
-  border-radius: 10px;
 }
 
 .card__image {
@@ -464,7 +515,7 @@ body {
   .what__title:not(:last-child) {
     margin-bottom: 40px;
   }
-  .what__card {
+  .card {
     width: calc(50% - 35px);
     min-height: 555px;
   }
@@ -487,7 +538,7 @@ body {
     font-size: 36px;
     transform: translate(-70px, 0);
   }
-  .what__card {
+  .card {
     padding: 48px;
   }
 }
@@ -638,20 +689,21 @@ body {
   padding-bottom: 20px;
 }
 
-.carousel-clients__column {
+.carousel-clients__column-left {
   display: flex;
   flex-direction: column;
-}
-.carousel-clients__column--left {
   position: relative;
   min-height: 160px;
   background-color: rgba(74, 153, 211, 0.1);
 }
-.carousel-clients__column--right {
+
+.carousel-clients__column-right {
+  display: flex;
+  flex-direction: column;
   align-self: center;
   position: relative;
 }
-.carousel-clients__column--right::before {
+.carousel-clients__column-right::before {
   content: "";
   position: absolute;
   top: 0;
@@ -660,7 +712,7 @@ body {
   height: 153px;
   display: block;
   z-index: -1;
-  background: url("/img/square-of-dots.svg") no-repeat center/contain;
+  background: url("/img/decor-square-of-dots.svg") no-repeat center/contain;
 }
 
 .carousel-clients__image {
@@ -692,7 +744,7 @@ body {
   display: block;
   width: 30px;
   height: 30px;
-  background: url(/img/clients/quote-icon.svg) no-repeat center/contain;
+  background: url("/img/clients/quote-icon.svg") no-repeat center/contain;
 }
 
 .carousel-clients__quote-icon:not(:last-child) {
@@ -768,21 +820,20 @@ body {
     width: 20%;
     flex-direction: row;
     -moz-column-gap: 6%;
-         column-gap: 6%; /* 86/1440 */
+         column-gap: 6%;
     padding-top: 120px;
     padding-bottom: 50px;
   }
-  .carousel-clients__column {
+  .carousel-clients__column-right {
     flex: 0 0 calc(50% - 43px);
-  }
-  .carousel-clients__column--right {
     align-self: flex-end;
   }
-  .carousel-clients__column--left {
+  .carousel-clients__column-left {
+    flex: 0 0 calc(50% - 43px);
     min-height: 400px;
   }
   .carousel-clients__image {
-    right: 14%; /* 100/677 */
+    right: 14%;
     transform: translateX(0);
     max-width: 430px;
   }
@@ -903,46 +954,6 @@ body {
      object-fit: contain;
 }
 
-.decor {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.decor__item {
-  position: absolute;
-  width: 125px;
-  height: 100px;
-}
-
-.decor__item--download-1 {
-  bottom: -25px;
-  left: -32px;
-  background: url("../../img/decor-rect-blue-download.svg") no-repeat center/contain;
-}
-
-.decor__item--download-2 {
-  bottom: -25px;
-  right: -32px;
-  background: url("../../img/decor-rect-brown-download.svg") no-repeat center/contain;
-}
-
-.decor__item--what-1 {
-  top: 0;
-  right: -35px;
-  background: url("/img/decor-rect-blue-what.svg") no-repeat center/contain;
-}
-
-.decor__item--what-2 {
-  bottom: 0;
-  left: -35px;
-  background: url("/img/decor-rect-brown-what.svg") no-repeat center/contain;
-}
-
 @media (min-width: 768px) {
   .download__container {
     flex-direction: row;
@@ -960,18 +971,6 @@ body {
   .download__actions {
     -moz-column-gap: 28px;
          column-gap: 28px;
-  }
-  .decor__item {
-    width: 255px;
-    height: 200px;
-  }
-  .decor__item--download-1 {
-    bottom: -50px;
-    left: -65px;
-  }
-  .decor__item--download-2 {
-    bottom: -50px;
-    right: -65px;
   }
 }
 @media (min-width: 1200px) {
@@ -995,8 +994,8 @@ body {
   background-color: rgb(74, 153, 211);
 }
 
-.footer__top {
-  padding-top: 50px;
+.top-footer {
+  padding-top: 55px;
   padding-bottom: 30px;
 }
 
@@ -1127,9 +1126,6 @@ body {
 .footer__bottom {
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.bottom-footer {
   border-top: 1px solid rgb(255, 255, 255);
 }
 
@@ -1196,10 +1192,6 @@ body {
   }
 }
 @media (min-width: 1200px) {
-  .top-footer {
-    padding-top: 55px;
-    padding-bottom: 30px;
-  }
   .top-footer__container {
     max-width: 1220px;
     flex-wrap: nowrap;
