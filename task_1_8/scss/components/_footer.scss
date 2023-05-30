@@ -2,12 +2,9 @@
   background-color: $color-blue;
 }
 
-.footer__top {
-  padding-top: 50px;
-  padding-bottom: 30px;
-}
-
 .top-footer {
+  padding-top: 55px;
+  padding-bottom: 30px;
 }
 
 .top-footer__container {
@@ -36,16 +33,13 @@
   column-gap: 60px;
 }
 
-.top-footer__list-wrapper {
-}
-
 .top-footer__list-title {
   display: inline-block;
   position: relative;
   padding: 5px 0;
   font-weight: 500;
   font-size: 18px;
-  line-height: 1.05; /* 19/18 */
+  line-height: calc(19 / 18);
   color: $color-white;
   white-space: nowrap;
 
@@ -65,17 +59,13 @@
   margin-bottom: 34px;
 }
 
-.top-footer__list {
-}
-.top-footer__list-item {
-}
 .top-footer__list-item:not(:last-child) {
   margin-bottom: 18px;
 }
 
 .top-footer__list-link {
   font-size: 14px;
-  line-height: 1.07; /* 15/14 */
+  line-height: calc(15 / 14);
   color: $color-white;
 
   @extend %transition;
@@ -94,7 +84,7 @@
 
 .top-footer__form-label {
   font-size: 18px;
-  line-height: 1.44; /* 26/18 */
+  line-height: calc(26 / 18);
   color: $color-white;
 }
 
@@ -105,7 +95,7 @@
 
 .top-footer__form-email {
   font-size: 14px;
-  line-height: 1; /* 14/14 */
+  line-height: calc(14 / 14);
   color: $color-orange;
   border-radius: 3px;
   padding: 18px 10px;
@@ -127,7 +117,7 @@
 .top-footer__form-btn {
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.06; /* 17/16 */
+  line-height: calc(17 / 16);
   color: $color-blue;
 
   cursor: pointer;
@@ -149,9 +139,6 @@
 .footer__bottom {
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.bottom-footer {
   border-top: 1px solid $color-white;
 }
 
@@ -166,7 +153,7 @@
 .footer__copyright {
   font-weight: 700;
   font-size: 11px;
-  line-height: 1; /* 11/11 */
+  line-height: calc(11 / 11);
   color: $color-white;
 }
 
@@ -185,6 +172,8 @@
 .footer__social-links-link {
   cursor: pointer;
   color: $color-white;
+
+  @extend %transition;
 
   &:hover,
   &:focus {
@@ -221,11 +210,6 @@
 }
 
 @media ($laptop) {
-  .top-footer {
-    padding-top: 55px;
-    padding-bottom: 30px;
-  }
-
   .top-footer__container {
     max-width: 1220px;
     flex-wrap: nowrap;

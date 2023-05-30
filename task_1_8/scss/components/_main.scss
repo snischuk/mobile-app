@@ -25,7 +25,7 @@
 .main__title {
   font-weight: 500;
   font-size: 28px;
-  line-height: 1.4; /* 70/50 */
+  line-height: calc(70 / 50);
   color: $color-black;
   letter-spacing: 0.05em;
 }
@@ -36,7 +36,7 @@
 
 .main__text {
   font-size: 16px;
-  line-height: 1.8; /* 36/20 */
+  line-height: calc(36 / 20);
   color: $color-black;
 }
 

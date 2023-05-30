@@ -3,11 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="./css/style.css" />
     <title>Landing-page</title>
   </head>
@@ -15,35 +10,37 @@
     <div class="wrapper">
       <header class="header">
         <div class="header__container">
-          <a href="#" class="header__logo">
-            <img src="./img/logo.svg" alt="logotip" />
-          </a>
-
-          <ul class="header__menu menu">
-            <li class="menu__item">
-              <a href="#" class="menu-link">Home</a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu-link">About</a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu-link">Contact Us</a>
-            </li>
-          </ul>
+          <h1 class="header__logo">
+            <a href="#">
+              <img src="./img/logo.svg" alt="logo" />
+            </a>
+          </h1>
+          <nav>
+            <ul class="header__menu">
+              <li>
+                <a href="#" class="menu__link">Home</a>
+              </li>
+              <li>
+                <a href="#" class="menu__link">About</a>
+              </li>
+              <li>
+                <a href="#" class="menu__link">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
+
       <main class="page">
-        <section class="page__main main">
+        <section class="main">
           <div class="main__container">
             <div class="main__content">
               <h1 class="main__title">New E-commerce App best for You</h1>
-
               <p class="main__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
                 sed vulputate vitae velit dictum cursus amet. Turpis donec ut
                 velit quis. Cursus commodo, eget urna, sapien amet.
               </p>
-
               <div class="main__actions">
                 <a href="#" class="main__button">
                   <img src="./img/main/btn-google.svg" alt="google store" />
@@ -59,13 +56,12 @@
           </div>
         </section>
 
-        <section class="page__what what">
+        <section class="what">
           <div class="what__container">
             <h2 class="what__title">
               What we do to help our customers in digital era.
             </h2>
-
-            <div class="what__card card">
+            <div class="card">
               <div class="card__image">
                 <img src="./img/what/recieve.svg" alt="recieve" />
               </div>
@@ -81,7 +77,7 @@
               ></a>
             </div>
 
-            <div class="what__card card">
+            <div class="card">
               <div class="card__image">
                 <img src="./img/what/send.svg" alt="send" />
               </div>
@@ -97,7 +93,7 @@
               ></a>
             </div>
 
-            <div class="what__card card">
+            <div class="card">
               <div class="card__image">
                 <img src="./img/what/buy.svg" alt="buy" />
               </div>
@@ -114,17 +110,17 @@
             </div>
           </div>
 
-          <div class="what__decor decor">
+          <div class="decor-wrapper">
             <div class="decor__item decor__item--what-1"></div>
             <div class="decor__item decor__item--what-2"></div>
           </div>
         </section>
 
-        <section class="page__how how">
+        <section class="how">
           <div class="how__container">
             <h2 class="how__title">How it works</h2>
-            <div class="how__items">
-              <div class="how__item">
+            <ul class="how__items">
+              <li class="how__item">
                 <svg class="how__image">
                   <use href="./img/symbol-defs.svg#icon-how-create"></use>
                 </svg>
@@ -132,8 +128,8 @@
                 <p class="how__text">
                   Lorem ipsum dolor sit amet, consecteteu.
                 </p>
-              </div>
-              <div class="how__item">
+              </li>
+              <li class="how__item">
                 <svg class="how__image">
                   <use href="./img/symbol-defs.svg#icon-how-get"></use>
                 </svg>
@@ -141,8 +137,8 @@
                 <p class="how__text">
                   Lorem ipsum dolor sit amet, consecteteu.
                 </p>
-              </div>
-              <div class="how__item">
+              </li>
+              <li class="how__item">
                 <svg class="how__image">
                   <use href="./img/symbol-defs.svg#icon-how-enjoy"></use>
                 </svg>
@@ -150,12 +146,12 @@
                 <p class="how__text">
                   Lorem ipsum dolor sit amet, consecteteu.
                 </p>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 
-        <section class="page__clients clients">
+        <section class="clients">
           <h2 class="clients__title">What our client say</h2>
           <div class="carousel-clients">
             <input type="radio" name="slides" id="switch-1" checked />
@@ -166,9 +162,7 @@
 
             <div class="carousel-clients__track">
               <div class="carousel-clients__slide">
-                <div
-                  class="carousel-clients__column carousel-clients__column--left"
-                >
+                <div class="carousel-clients__column-left">
                   <div class="carousel-clients__image">
                     <img
                       src="./img/clients/client-photo-1.png"
@@ -176,10 +170,8 @@
                     />
                   </div>
                 </div>
-                <div
-                  class="carousel-clients__column carousel-clients__column--right"
-                >
-                  <div class="carousel-clients__content">
+                <div class="carousel-clients__column-right">
+                  <blockquote class="carousel-clients__content">
                     <span class="carousel-clients__quote-icon"> </span>
                     <p class="carousel-clients__quote-text">
                       Amet in elementum nulla scelerisque dui, egestas at. Elit
@@ -207,13 +199,11 @@
                         ></span>
                       </label>
                     </div>
-                  </div>
+                  </blockquote>
                 </div>
               </div>
               <div class="carousel-clients__slide">
-                <div
-                  class="carousel-clients__column carousel-clients__column--left"
-                >
+                <div class="carousel-clients__column-left">
                   <div class="carousel-clients__image">
                     <img
                       src="./img/clients/client-photo-1.png"
@@ -221,9 +211,7 @@
                     />
                   </div>
                 </div>
-                <div
-                  class="carousel-clients__column carousel-clients__column--right"
-                >
+                <div class="carousel-clients__column-right">
                   <div class="carousel-clients__content">
                     <span class="carousel-clients__quote-icon"> </span>
                     <p class="carousel-clients__quote-text">
@@ -256,9 +244,7 @@
                 </div>
               </div>
               <div class="carousel-clients__slide">
-                <div
-                  class="carousel-clients__column carousel-clients__column--left"
-                >
+                <div class="carousel-clients__column-left">
                   <div class="carousel-clients__image">
                     <img
                       src="./img/clients/client-photo-1.png"
@@ -266,9 +252,7 @@
                     />
                   </div>
                 </div>
-                <div
-                  class="carousel-clients__column carousel-clients__column--right"
-                >
+                <div class="carousel-clients__column-right">
                   <div class="carousel-clients__content">
                     <span class="carousel-clients__quote-icon"> </span>
                     <p class="carousel-clients__quote-text">
@@ -301,9 +285,7 @@
                 </div>
               </div>
               <div class="carousel-clients__slide">
-                <div
-                  class="carousel-clients__column carousel-clients__column--left"
-                >
+                <div class="carousel-clients__column-left">
                   <div class="carousel-clients__image">
                     <img
                       src="./img/clients/client-photo-1.png"
@@ -311,9 +293,7 @@
                     />
                   </div>
                 </div>
-                <div
-                  class="carousel-clients__column carousel-clients__column--right"
-                >
+                <div class="carousel-clients__column-right">
                   <div class="carousel-clients__content">
                     <span class="carousel-clients__quote-icon"> </span>
                     <p class="carousel-clients__quote-text">
@@ -346,9 +326,7 @@
                 </div>
               </div>
               <div class="carousel-clients__slide">
-                <div
-                  class="carousel-clients__column carousel-clients__column--left"
-                >
+                <div class="carousel-clients__column-left">
                   <div class="carousel-clients__image">
                     <img
                       src="./img/clients/client-photo-1.png"
@@ -356,9 +334,7 @@
                     />
                   </div>
                 </div>
-                <div
-                  class="carousel-clients__column carousel-clients__column--right"
-                >
+                <div class="carousel-clients__column-right">
                   <div class="carousel-clients__content">
                     <span class="carousel-clients__quote-icon"> </span>
                     <p class="carousel-clients__quote-text">
@@ -394,7 +370,7 @@
           </div>
         </section>
 
-        <section class="page__download download">
+        <section class="download">
           <div class="download__container">
             <div class="download__images">
               <img
@@ -404,13 +380,12 @@
             </div>
             <div class="download__content">
               <h2 class="download__title">Download app to enjoy more!</h2>
-              <div class="download__text">
-                <p>
-                  Amet in elementum nulla scelerisque dui, egestas at. Elit
-                  consectetur turpis elementum amet vitae et etiam nec. Varius
-                  volutpat hac adipiscing tincidunt pretium.
-                </p>
-              </div>
+              <p class="download__text">
+                Amet in elementum nulla scelerisque dui, egestas at. Elit
+                consectetur turpis elementum amet vitae et etiam nec. Varius
+                volutpat hac adipiscing tincidunt pretium.
+              </p>
+
               <div class="download__actions">
                 <a href="#" class="download__button">
                   <img
@@ -427,23 +402,24 @@
               </div>
             </div>
           </div>
-          <div class="download__decor decor">
+          <div class="decor-wrapper">
             <div class="decor__item decor__item--download-1"></div>
             <div class="decor__item decor__item--download-2"></div>
           </div>
         </section>
       </main>
+
       <footer class="footer">
-        <div class="footer__top top-footer">
+        <div class="top-footer">
           <div class="top-footer__container">
             <a class="top-footer__logo">
               <img src="./img/footer/logo-footer.svg" alt="logo footer" />
             </a>
 
             <ul class="top-footer__lists-container">
-              <li class="top-footer__list-wrapper">
+              <li>
                 <h2 class="top-footer__list-title">Quick Links</h2>
-                <ul class="top-footer__list">
+                <ul>
                   <li class="top-footer__list-item">
                     <a href="#" class="top-footer__list-link">Sign Up</a>
                   </li>
@@ -453,9 +429,9 @@
                 </ul>
               </li>
 
-              <li class="top-footer__list-wrapper">
+              <li>
                 <h2 class="top-footer__list-title">Others</h2>
-                <ul class="top-footer__list">
+                <ul>
                   <li class="top-footer__list-item">
                     <a href="#" class="top-footer__list-link">User FAQs</a>
                   </li>
@@ -476,9 +452,9 @@
                 </ul>
               </li>
 
-              <li class="top-footer__list-wrapper">
+              <li>
                 <h2 class="top-footer__list-title">Products</h2>
-                <ul class="top-footer__list">
+                <ul>
                   <li class="top-footer__list-item">
                     <a href="#" class="top-footer__list-link">Send</a>
                   </li>
@@ -493,7 +469,7 @@
             </ul>
 
             <form class="top-footer__form" action="#">
-              <label class="top-footer__form-label" for="poshta"
+              <label class="top-footer__form-label" for="email"
                 >Subscribe to our newsletter and be the first to know about our
                 updates</label
               >
@@ -501,7 +477,7 @@
                 <input
                   class="top-footer__form-email"
                   type="email"
-                  id="poshta"
+                  id="email"
                   placeholder="Email Address"
                 />
                 <button class="top-footer__form-btn" type="submit">
@@ -511,10 +487,10 @@
             </form>
           </div>
         </div>
-        <div class="footer__bottom bottom-footer">
+        <div class="footer__bottom">
           <div class="bottom-footer__container">
             <p class="footer__copyright">
-              Copyright © 2020. All rights reserved.
+              Copyright &copy; 2020. All rights reserved.
             </p>
             <ul class="footer__social-links-items">
               <li class="footer__social-links-item">

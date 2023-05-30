@@ -1,7 +1,7 @@
 .how {
   padding-top: 50px;
   padding-bottom: 50px;
-  background: rgba($color-blue, 0.1); // opacity 0.1 + var color?
+  background: rgba($color-blue, 0.1);
 }
 
 .how__container {
@@ -12,7 +12,7 @@
 .how__title {
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.04; /* 27/26 */
+  line-height: clac(27/26);
   color: $color-blue;
   text-align: center;
 }
@@ -37,6 +37,8 @@
   stroke-width: 0;
   fill: $color-orange;
 
+  @extend %transition;
+
   &:hover {
     fill: $color-blue;
   }
@@ -49,7 +51,7 @@
 .how__subtitle {
   font-weight: 500;
   font-size: 18px;
-  line-height: 1.05; /* 19/18 */
+  line-height: calc(19 / 18);
   color: $color-black;
   text-align: center;
 }
@@ -60,7 +62,7 @@
 
 .how__text {
   font-size: 16px;
-  line-height: 1.62; /* 26/16 */
+  line-height: calc(26 / 16);
   color: $color-black;
   text-align: center;
 }

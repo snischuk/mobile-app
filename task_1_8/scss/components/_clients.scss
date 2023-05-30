@@ -13,7 +13,7 @@ $slideWidth: calc(100% / $slidesQuantity);
 .clients__title {
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.04; /* 27/26 */
+  line-height: calc(27 / 26);
   color: $color-black;
   text-align: center;
 }
@@ -41,22 +41,19 @@ $slideWidth: calc(100% / $slidesQuantity);
   padding-bottom: 20px;
 }
 
-.carousel-clients__column {
+.carousel-clients__column-left {
   @include d-flex(column);
+  position: relative;
+  min-height: 160px;
+  background-color: rgba($color-blue, 0.1);
+}
 
-  &--left {
-    position: relative;
-    min-height: 160px;
-    background-color: rgba($color-blue, 0.1);
-  }
+.carousel-clients__column-right {
+  @include d-flex(column);
+  align-self: center;
+  position: relative;
 
-  &--right {
-    align-self: center;
-
-    position: relative;
-  }
-
-  &--right::before {
+  &::before {
     content: "";
     position: absolute;
     top: 0;
@@ -65,7 +62,7 @@ $slideWidth: calc(100% / $slidesQuantity);
     height: 153px;
     display: block;
     z-index: -1;
-    background: url("/img/square-of-dots.svg") no-repeat center / contain;
+    background: url("/img/decor-square-of-dots.svg") no-repeat center / contain;
   }
 }
 
@@ -96,7 +93,7 @@ $slideWidth: calc(100% / $slidesQuantity);
   display: block;
   width: 30px;
   height: 30px;
-  background: url(/img/clients/quote-icon.svg) no-repeat center / contain;
+  background: url("/img/clients/quote-icon.svg") no-repeat center / contain;
 }
 
 .carousel-clients__quote-icon:not(:last-child) {
@@ -105,7 +102,7 @@ $slideWidth: calc(100% / $slidesQuantity);
 
 .carousel-clients__quote-text {
   font-size: 16px;
-  line-height: 1.5; /* 24/16 */
+  line-height: calc(24 / 16);
   color: $color-black;
 }
 
@@ -116,7 +113,7 @@ $slideWidth: calc(100% / $slidesQuantity);
 .carousel-clients__quote-author {
   font-weight: 500;
   font-size: 18px;
-  line-height: 1.06; /* 19/18 */
+  line-height: calc(19 / 18);
   color: $color-black;
 }
 
@@ -180,25 +177,24 @@ $slideWidth: calc(100% / $slidesQuantity);
   .carousel-clients__slide {
     width: 20%;
     flex-direction: row;
-    column-gap: 6%; /* 86/1440 */
+    column-gap: 6%;
     padding-top: 120px;
     padding-bottom: 50px;
   }
 
-  .carousel-clients__column {
+  .carousel-clients__column-right {
     flex: 0 0 calc(50% - 43px);
 
-    &--right {
-      align-self: flex-end;
-    }
+    align-self: flex-end;
+  }
 
-    &--left {
-      min-height: 400px;
-    }
+  .carousel-clients__column-left {
+    flex: 0 0 calc(50% - 43px);
+    min-height: 400px;
   }
 
   .carousel-clients__image {
-    right: 14%; /* 100/677 */
+    right: 14%;
     transform: translateX(0);
     max-width: 430px;
   }
