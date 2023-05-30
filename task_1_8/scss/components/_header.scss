@@ -39,7 +39,7 @@
 
 .menu-link {
   font-size: 18px;
-  line-height: 1.18; /* 19/16 */
+  line-height: calc(19 / 16);
   color: $color-black;
 
   @extend %transition;

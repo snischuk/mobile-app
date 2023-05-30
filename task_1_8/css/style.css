@@ -6,7 +6,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-/*reset*/
 * {
   padding: 0;
   margin: 0;
@@ -94,7 +93,6 @@ h6 {
   font-weight: 400;
 }
 
-/*--------------------*/
 @font-face {
   font-family: "Objective";
   src: url("../../fonts/Objective-Regular.woff2"), url("../../fonts/Objective-Regular.woff");
@@ -182,7 +180,7 @@ body {
 
 .menu-link {
   font-size: 18px;
-  line-height: 1.18; /* 19/16 */
+  line-height: 1.1875;
   color: rgb(15, 0, 26);
 }
 .menu-link:hover, .menu-link:focus {
@@ -233,7 +231,7 @@ body {
 .main__title {
   font-weight: 500;
   font-size: 28px;
-  line-height: 1.4; /* 70/50 */
+  line-height: 1.4;
   color: rgb(15, 0, 26);
   letter-spacing: 0.05em;
 }
@@ -244,7 +242,7 @@ body {
 
 .main__text {
   font-size: 16px;
-  line-height: 1.8; /* 36/20 */
+  line-height: 1.8;
   color: rgb(15, 0, 26);
 }
 
@@ -348,7 +346,7 @@ body {
 .what__title {
   font-weight: 500;
   font-size: 30px;
-  line-height: 1.27; /* 46/36 */
+  line-height: 1.2777777778;
   color: rgb(15, 0, 26);
   letter-spacing: 0.05em;
   max-width: 397px;
@@ -424,21 +422,21 @@ body {
 .card__title {
   font-weight: 500;
   font-size: 20px;
-  line-height: 1.5; /* 30/20 */
+  line-height: 1.5;
   color: rgb(15, 0, 26);
   letter-spacing: 0.02em;
 }
 
 .card__text {
   font-size: 16px;
-  line-height: 1.62; /* 26/16 */
+  line-height: 1.625;
   color: rgb(15, 0, 26);
 }
 
 .card__link {
   font-weight: 500;
   font-size: 14px;
-  line-height: 2.14; /* 30/14 */
+  line-height: 2.1428571429;
   color: rgb(74, 153, 211);
   letter-spacing: 0.05em;
   display: flex;
@@ -476,12 +474,6 @@ body {
   .card__image:not(:last-child) {
     margin-bottom: 56px;
   }
-  .decor__item--what-1 {
-    right: -65px;
-  }
-  .decor__item--what-2 {
-    left: -65px;
-  }
 }
 @media (min-width: 1200px) {
   .what {
@@ -517,7 +509,7 @@ body {
 .how__title {
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.04; /* 27/26 */
+  line-height: clac(27/26);
   color: rgb(74, 153, 211);
   text-align: center;
 }
@@ -556,7 +548,7 @@ body {
 .how__subtitle {
   font-weight: 500;
   font-size: 18px;
-  line-height: 1.05; /* 19/18 */
+  line-height: 1.0555555556;
   color: rgb(15, 0, 26);
   text-align: center;
 }
@@ -567,7 +559,7 @@ body {
 
 .how__text {
   font-size: 16px;
-  line-height: 1.62; /* 26/16 */
+  line-height: 1.625;
   color: rgb(15, 0, 26);
   text-align: center;
 }
@@ -620,7 +612,7 @@ body {
 .clients__title {
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.04; /* 27/26 */
+  line-height: 1.0384615385;
   color: rgb(15, 0, 26);
   text-align: center;
 }
@@ -712,7 +704,7 @@ body {
 
 .carousel-clients__quote-text {
   font-size: 16px;
-  line-height: 1.5; /* 24/16 */
+  line-height: 1.5;
   color: rgb(15, 0, 26);
 }
 
@@ -723,7 +715,7 @@ body {
 .carousel-clients__quote-author {
   font-weight: 500;
   font-size: 18px;
-  line-height: 1.06; /* 19/18 */
+  line-height: 1.0555555556;
   color: rgb(15, 0, 26);
 }
 
@@ -861,7 +853,7 @@ body {
 .download__title {
   font-weight: 700;
   font-size: 25px;
-  line-height: 1.04; /* 26/25 */
+  line-height: 1.04;
   color: rgb(15, 0, 26);
   text-align: center;
 }
@@ -872,7 +864,7 @@ body {
 
 .download__text {
   font-size: 16px;
-  line-height: 1.5; /* 24/16 */
+  line-height: 1.5;
   color: rgb(15, 0, 26);
   text-align: center;
 }
@@ -1047,7 +1039,7 @@ body {
   padding: 5px 0;
   font-weight: 500;
   font-size: 18px;
-  line-height: 1.05; /* 19/18 */
+  line-height: 1.0555555556;
   color: rgb(255, 255, 255);
   white-space: nowrap;
 }
@@ -1072,7 +1064,7 @@ body {
 
 .top-footer__list-link {
   font-size: 14px;
-  line-height: 1.07; /* 15/14 */
+  line-height: 1.0714285714;
   color: rgb(255, 255, 255);
 }
 .top-footer__list-link:hover, .top-footer__list-link:focus {
@@ -1088,7 +1080,7 @@ body {
 
 .top-footer__form-label {
   font-size: 18px;
-  line-height: 1.44; /* 26/18 */
+  line-height: 1.4444444444;
   color: rgb(255, 255, 255);
 }
 
@@ -1100,7 +1092,7 @@ body {
 
 .top-footer__form-email {
   font-size: 14px;
-  line-height: 1; /* 14/14 */
+  line-height: 1;
   color: rgb(211, 132, 74);
   border-radius: 3px;
   padding: 18px 10px;
@@ -1122,7 +1114,7 @@ body {
 .top-footer__form-btn {
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.06; /* 17/16 */
+  line-height: 1.0625;
   color: rgb(74, 153, 211);
   cursor: pointer;
   background-color: rgb(255, 255, 255);
@@ -1156,7 +1148,7 @@ body {
 .footer__copyright {
   font-weight: 700;
   font-size: 11px;
-  line-height: 1; /* 11/11 */
+  line-height: 1;
   color: rgb(255, 255, 255);
 }
 

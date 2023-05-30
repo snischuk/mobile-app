@@ -16,7 +16,7 @@
 .what__title {
   font-weight: 500;
   font-size: 30px;
-  line-height: 1.27; /* 46/36 */
+  line-height: calc(46 / 36);
   color: $color-black;
   letter-spacing: 0.05em;
   max-width: 397px;
@@ -90,21 +90,21 @@
 .card__title {
   font-weight: 500;
   font-size: 20px;
-  line-height: 1.5; /* 30/20 */
+  line-height: calc(30 / 20);
   color: $color-black;
   letter-spacing: 0.02em;
 }
 
 .card__text {
   font-size: 16px;
-  line-height: 1.62; /* 26/16 */
+  line-height: calc(26 / 16);
   color: $color-black;
 }
 
 .card__link {
   font-weight: 500;
   font-size: 14px;
-  line-height: 2.14; /* 30/14 */
+  line-height: calc(30 / 14);
   color: $color-blue;
   letter-spacing: 0.05em;
 
@@ -148,14 +148,6 @@
 
   .card__image:not(:last-child) {
     margin-bottom: 56px;
-  }
-
-  ///////// element bez bloka???
-  .decor__item--what-1 {
-    right: -65px;
-  }
-  .decor__item--what-2 {
-    left: -65px;
   }
 }
 

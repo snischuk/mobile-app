@@ -45,7 +45,7 @@
   padding: 5px 0;
   font-weight: 500;
   font-size: 18px;
-  line-height: 1.05; /* 19/18 */
+  line-height: calc(19 / 18);
   color: $color-white;
   white-space: nowrap;
 
@@ -75,7 +75,7 @@
 
 .top-footer__list-link {
   font-size: 14px;
-  line-height: 1.07; /* 15/14 */
+  line-height: calc(15 / 14);
   color: $color-white;
 
   @extend %transition;
@@ -94,7 +94,7 @@
 
 .top-footer__form-label {
   font-size: 18px;
-  line-height: 1.44; /* 26/18 */
+  line-height: calc(26 / 18);
   color: $color-white;
 }
 
@@ -105,7 +105,7 @@
 
 .top-footer__form-email {
   font-size: 14px;
-  line-height: 1; /* 14/14 */
+  line-height: calc(14 / 14);
   color: $color-orange;
   border-radius: 3px;
   padding: 18px 10px;
@@ -127,7 +127,7 @@
 .top-footer__form-btn {
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.06; /* 17/16 */
+  line-height: calc(17 / 16);
   color: $color-blue;
 
   cursor: pointer;
@@ -166,7 +166,7 @@
 .footer__copyright {
   font-weight: 700;
   font-size: 11px;
-  line-height: 1; /* 11/11 */
+  line-height: calc(11 / 11);
   color: $color-white;
 }
 
