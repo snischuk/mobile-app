@@ -2,7 +2,7 @@
   box-shadow: 0px 4px 16px rgba(75, 0, 129, 0.26);
 }
 
-.top-footer__form-btn, .top-footer__form-email, .top-footer__list-link, .carousel-clients__arrow-btn, .card__link, .menu-link {
+.top-footer__form-btn, .top-footer__form-email, .top-footer__list-link, .carousel-clients__arrow-btn, .card__link, .menu__link {
   transition: all 0.3s ease-in-out;
 }
 
@@ -168,7 +168,7 @@ body {
   height: 42px;
 }
 
-.menu {
+.header__menu {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -178,12 +178,12 @@ body {
        column-gap: 15px;
 }
 
-.menu-link {
+.menu__link {
   font-size: 18px;
   line-height: 1.1875;
   color: rgb(15, 0, 26);
 }
-.menu-link:hover, .menu-link:focus {
+.menu__link:hover, .menu__link:focus {
   color: rgb(74, 153, 211);
 }
 
@@ -196,9 +196,6 @@ body {
   .header {
     padding-top: 25px;
     padding-bottom: 25px;
-  }
-  .menu-list {
-    justify-content: flex-end;
   }
 }
 @media (min-width: 1200px) {
