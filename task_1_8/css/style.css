@@ -2,7 +2,7 @@
   box-shadow: 0px 4px 16px rgba(75, 0, 129, 0.26);
 }
 
-.top-footer__form-btn, .top-footer__form-email, .top-footer__list-link, .carousel-clients__arrow-btn, .card__link, .menu__link {
+.footer__social-links-link, .top-footer__form-btn, .top-footer__form-email, .top-footer__list-link, .carousel-clients__arrow-btn, .how__image, .card__link, .menu__link {
   transition: all 0.3s ease-in-out;
 }
 

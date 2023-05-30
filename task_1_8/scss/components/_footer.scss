@@ -173,6 +173,8 @@
   cursor: pointer;
   color: $color-white;
 
+  @extend %transition;
+
   &:hover,
   &:focus {
     color: $color-orange;

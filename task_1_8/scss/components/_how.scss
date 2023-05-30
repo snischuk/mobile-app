@@ -37,6 +37,8 @@
   stroke-width: 0;
   fill: $color-orange;
 
+  @extend %transition;
+
   &:hover {
     fill: $color-blue;
   }
