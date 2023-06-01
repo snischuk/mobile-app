@@ -6,6 +6,7 @@
 
 .how__container {
   @include d-flex(column);
+
   row-gap: 25px;
 }
 
@@ -19,6 +20,7 @@
 
 .how__items {
   @include d-flex(row);
+
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 10px;
@@ -27,6 +29,7 @@
 
 .how__item {
   @include d-flex(column);
+
   align-items: center;
 }
 

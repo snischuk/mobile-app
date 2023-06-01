@@ -14,11 +14,13 @@
 
 .main__container {
   @include d-flex(column);
+
   row-gap: 15px;
 }
 
 .main__content {
   @include d-flex(column);
+
   align-items: center;
 }
 
@@ -46,6 +48,7 @@
 
 .main__actions {
   @include d-flex(row);
+
   column-gap: 15px;
 }
 

@@ -8,6 +8,7 @@
 
 .what__container {
   @include d-flex(column);
+
   flex-wrap: wrap;
   align-items: center;
   gap: 20px;
@@ -28,6 +29,7 @@
 
 .card {
   @include d-flex(column);
+
   row-gap: 10px;
   position: relative;
   padding: 15px;
@@ -106,6 +108,7 @@
   letter-spacing: 0.05em;
 
   @include d-flex(row);
+
   align-items: center;
   column-gap: 19px;
 

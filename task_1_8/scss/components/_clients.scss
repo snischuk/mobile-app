@@ -35,7 +35,9 @@ $slideWidth: calc(100% / $slidesQuantity);
 
 .carousel-clients__slide {
   flex-basis: $slideWidth;
+
   @include d-flex(column);
+
   row-gap: 20px;
   padding-top: 50px;
   padding-bottom: 20px;
@@ -43,6 +45,7 @@ $slideWidth: calc(100% / $slidesQuantity);
 
 .carousel-clients__column-left {
   @include d-flex(column);
+
   position: relative;
   min-height: 160px;
   background-color: rgba($color-blue, 0.1);
@@ -50,6 +53,7 @@ $slideWidth: calc(100% / $slidesQuantity);
 
 .carousel-clients__column-right {
   @include d-flex(column);
+
   align-self: center;
   position: relative;
 
@@ -85,7 +89,9 @@ $slideWidth: calc(100% / $slidesQuantity);
   position: relative;
   max-width: 448px;
   padding: 0 15px;
+
   @include d-flex(column);
+
   align-self: center;
 }
 
@@ -122,6 +128,7 @@ $slideWidth: calc(100% / $slidesQuantity);
   bottom: -10px;
 
   @include d-flex(row);
+
   align-self: flex-end;
 }
 
@@ -131,6 +138,7 @@ $slideWidth: calc(100% / $slidesQuantity);
   height: 80px;
 
   @include d-flex(row);
+
   justify-content: center;
   align-items: center;
 

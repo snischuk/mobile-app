@@ -7,6 +7,7 @@
 
 .download__container {
   @include d-flex(column-reverse);
+
   gap: 40px;
 }
 
@@ -39,6 +40,7 @@
 
 .download__actions {
   @include d-flex(row);
+
   justify-content: center;
   column-gap: 10px;
 }
