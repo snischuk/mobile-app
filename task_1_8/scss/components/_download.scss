@@ -48,6 +48,14 @@
 .download__button {
   max-width: 165px;
   max-height: 52px;
+
+  @extend %transition;
+
+  &:hover {
+    @extend %box-shadow;
+
+    filter: brightness(0.9);
+  }
 }
 
 .download__button img {

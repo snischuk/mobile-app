@@ -1,8 +1,8 @@
-.top-footer__form-btn:hover, .top-footer__form-btn:focus, .top-footer__form-email:hover, .top-footer__form-email:focus, .main {
+.top-footer__form-btn:hover, .top-footer__form-btn:focus, .top-footer__form-email:hover, .top-footer__form-email:focus, .download__button:hover, .main__button:hover, .main {
   box-shadow: 0px 4px 16px rgba(75, 0, 129, 0.26);
 }
 
-.footer__social-links-link, .top-footer__form-btn, .top-footer__form-email, .top-footer__list-link, .carousel-clients__arrow-btn, .how__image, .card__link, .menu__link {
+.footer__social-links-link, .top-footer__form-btn, .top-footer__form-email, .top-footer__list-link, .download__button, .carousel-clients__arrow-btn, .how__image, .card__link, .main__button, .menu__link {
   transition: all 0.3s ease-in-out;
 }
 
@@ -306,6 +306,9 @@ body {
 .main__button {
   max-width: 180px;
   max-height: 60px;
+}
+.main__button:hover {
+  filter: brightness(0.9);
 }
 
 .main__button img {
@@ -923,6 +926,9 @@ body {
 .download__button {
   max-width: 165px;
   max-height: 52px;
+}
+.download__button:hover {
+  filter: brightness(0.9);
 }
 
 .download__button img {
