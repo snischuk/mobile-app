@@ -394,8 +394,9 @@ body {
 }
 @media (min-width: 768px) {
   .what__container {
-    max-width: 825px;
-    max-height: 1223px;
+    max-width: 980px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 @media (min-width: 1200px) {
@@ -415,13 +416,14 @@ body {
 @media (min-width: 768px) {
   .what h2 {
     width: calc(50% - 35px);
+    transform: translate(0, -190px);
   }
 }
 @media (min-width: 1200px) {
   .what h2 {
     width: 100%;
     font-size: 36px;
-    transform: translate(-70px, 0);
+    transform: translate(-70px, -190px);
   }
 }
 .what h2:not(:last-child) {
@@ -449,13 +451,16 @@ body {
     width: calc(50% - 35px);
     min-height: 555px;
   }
+  .what__card:not(:first-child):nth-child(odd) {
+    transform: translateY(-50%);
+  }
 }
 @media (min-width: 1200px) {
   .what__card {
     padding: 48px;
   }
 }
-.what__card__card::before {
+.what__card::before {
   content: "";
   position: absolute;
   width: 153px;
@@ -464,16 +469,16 @@ body {
   z-index: -1;
   background: url("/img/decor-square-of-dots.svg") no-repeat center/contain;
 }
-.what__card__card:nth-of-type(1)::before {
+.what__card:nth-of-type(1)::before {
+  top: -14%;
+  right: -21%;
+}
+.what__card:nth-of-type(2)::before {
   top: 50%;
   left: -30%;
   transform: translateY(-50%);
 }
-.what__card__card:nth-of-type(2)::before {
-  top: -14%;
-  right: -21%;
-}
-.what__card__card:nth-of-type(3)::before {
+.what__card:nth-of-type(3)::before {
   bottom: -14%;
   right: -21%;
 }

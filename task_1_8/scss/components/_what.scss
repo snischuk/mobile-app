@@ -21,8 +21,9 @@
     gap: 20px;
 
     @media ($tablet) {
-      max-width: 825px;
-      max-height: 1223px;
+      max-width: 980px;
+      flex-direction: row;
+      justify-content: space-between;
     }
 
     @media ($laptop) {
@@ -40,12 +41,13 @@
 
     @media ($tablet) {
       width: calc(50% - 35px);
+      transform: translate(0, -190px);
     }
 
     @media ($laptop) {
       width: 100%;
       font-size: 36px;
-      transform: translate(-70px, 0);
+      transform: translate(-70px, -190px);
     }
 
     &:not(:last-child) {
@@ -72,13 +74,16 @@
     @media ($tablet) {
       width: calc(50% - 35px);
       min-height: 555px;
+      &:not(:first-child):nth-child(odd) {
+        transform: translateY(-50%);
+      }
     }
 
     @media ($laptop) {
       padding: 48px;
     }
 
-    &__card::before {
+    &::before {
       content: "";
       position: absolute;
       width: 153px;
@@ -89,18 +94,18 @@
         contain;
     }
 
-    &__card:nth-of-type(1)::before {
+    &:nth-of-type(1)::before {
+      top: -14%;
+      right: -21%;
+    }
+
+    &:nth-of-type(2)::before {
       top: 50%;
       left: -30%;
       transform: translateY(-50%);
     }
 
-    &__card:nth-of-type(2)::before {
-      top: -14%;
-      right: -21%;
-    }
-
-    &__card:nth-of-type(3)::before {
+    &:nth-of-type(3)::before {
       bottom: -14%;
       right: -21%;
     }
