@@ -9,6 +9,7 @@
 
 .top-footer__container {
   @include d-flex(row);
+
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
@@ -22,12 +23,14 @@
   height: 35px;
 
   @include d-flex(row);
+
   justify-content: center;
   align-items: center;
 }
 
 .top-footer__lists-container {
   @include d-flex(row);
+
   flex-wrap: wrap;
   row-gap: 30px;
   column-gap: 60px;
@@ -78,6 +81,7 @@
 
 .top-footer__form {
   @include d-flex(column);
+
   row-gap: 20px;
   width: 100%;
 }
@@ -90,12 +94,13 @@
 
 .top-footer__form-actions {
   @include d-flex(column);
+
   gap: 20px;
 }
 
 .top-footer__form-email {
   font-size: 14px;
-  line-height: calc(14 / 14);
+  line-height: 1;
   color: $color-orange;
   border-radius: 3px;
   padding: 18px 10px;
@@ -110,6 +115,7 @@
   &:hover,
   &:focus {
     @extend %box-shadow;
+
     border-color: $color-orange;
   }
 }
@@ -131,6 +137,7 @@
   &:hover,
   &:focus {
     @extend %box-shadow;
+
     border-color: $color-orange;
     color: $color-orange;
   }
@@ -144,6 +151,7 @@
 
 .bottom-footer__container {
   @include d-flex(row);
+
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
@@ -153,12 +161,13 @@
 .footer__copyright {
   font-weight: 700;
   font-size: 11px;
-  line-height: calc(11 / 11);
+  line-height: 1;
   color: $color-white;
 }
 
 .footer__social-links-items {
   @include d-flex(row);
+
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
@@ -241,6 +250,5 @@
   .bottom-footer__container {
     flex-direction: row;
     justify-content: space-between;
-    max-width: 1220px;
   }
 }

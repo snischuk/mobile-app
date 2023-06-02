@@ -1,12 +1,9 @@
 .main {
   @extend %box-shadow;
 
-  padding-top: 140px;
-  padding-bottom: 50px;
-
   background: linear-gradient(
       180deg,
-      rgba(74, 153, 211) -17.33%,
+      rgba(74, 153, 211, 0.2) -17.33%,
       rgba(74, 153, 211, 0) 75.91%
     ),
     $color-white;
@@ -14,11 +11,15 @@
 
 .main__container {
   @include d-flex(column);
+
   row-gap: 15px;
+  padding-top: 68px;
+  padding-bottom: 50px;
 }
 
 .main__content {
   @include d-flex(column);
+
   align-items: center;
 }
 
@@ -46,12 +47,21 @@
 
 .main__actions {
   @include d-flex(row);
+
   column-gap: 15px;
 }
 
 .main__button {
   max-width: 180px;
   max-height: 60px;
+
+  @extend %transition;
+
+  &:hover {
+    @extend %box-shadow;
+
+    filter: brightness(0.9);
+  }
 }
 
 .main__button img {
@@ -72,14 +82,11 @@
 }
 
 @media ($tablet) {
-  .main {
-    padding-top: 125px;
-    padding-bottom: 40px;
-  }
-
   .main__container {
     flex-direction: row;
     column-gap: 32px;
+    padding-top: 33px;
+    padding-bottom: 40px;
   }
 
   .main__content {
@@ -112,14 +119,11 @@
 }
 
 @media ($laptop) {
-  .main {
-    padding-top: 158px;
-    padding-bottom: 75px;
-  }
-
   .main__container {
     max-width: 1298px;
     justify-content: flex-end;
+    padding-top: 27px;
+    padding-bottom: 75px;
   }
 
   .main__title {

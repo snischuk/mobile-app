@@ -1,16 +1,11 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgb($color-white, 0.9);
-  z-index: 10;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 .header__container {
   @include d-flex(row);
+
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -20,6 +15,7 @@
 
 .header__logo {
   @include d-flex(row);
+
   justify-content: center;
   align-items: center;
   width: 128px;
@@ -28,6 +24,7 @@
 
 .header__menu {
   @include d-flex(row);
+
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 15px;
