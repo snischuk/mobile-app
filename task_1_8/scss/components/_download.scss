@@ -2,7 +2,7 @@
   position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
-  background: transparent;
+  overflow: hidden;
 
   font-size: 16px;
   line-height: calc(24 / 16);
@@ -12,6 +12,44 @@
   @media ($laptop) {
     padding-top: 98px;
     padding-bottom: 123px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 125px;
+    height: 100px;
+
+    @media ($tablet) {
+      width: 255px;
+      height: 200px;
+    }
+  }
+
+  &::before {
+    bottom: -25px;
+    left: -32px;
+    background: url("../../img/decor-rect-blue-download.svg") no-repeat center /
+      contain;
+
+    @media ($tablet) {
+      bottom: -50px;
+      left: -65px;
+    }
+  }
+
+  &::after {
+    bottom: -25px;
+    right: -32px;
+    background: url("../../img/decor-rect-brown-download.svg") no-repeat center /
+      contain;
+
+    @media ($tablet) {
+      bottom: -50px;
+      right: -65px;
+    }
   }
 
   &__container {

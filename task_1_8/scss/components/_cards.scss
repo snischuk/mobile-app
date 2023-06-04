@@ -1,4 +1,4 @@
-.what {
+.cards {
   position: relative;
   overflow: hidden;
   padding-top: 50px;
@@ -11,6 +11,33 @@
   @media ($laptop) {
     padding-top: 150px;
     padding-bottom: 150px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 125px;
+    height: 100px;
+
+    @media ($tablet) {
+      width: 255px;
+      height: 200px;
+    }
+  }
+
+  &::before {
+    top: 0;
+    right: -35px;
+    background: url("/img/decor-rect-blue-cards.svg") no-repeat center / contain;
+  }
+
+  &::after {
+    bottom: 0;
+    left: -35px;
+    background: url("/img/decor-rect-brown-cards.svg") no-repeat center /
+      contain;
   }
 
   &__container {
@@ -75,11 +102,13 @@
       width: calc(50% - 35px);
       min-height: 555px;
       &:not(:first-child):nth-child(odd) {
-        transform: translateY(-50%);
+        // transform: translateY(-50%);
+        margin-top: -75%;
       }
     }
 
     @media ($laptop) {
+      min-height: 555px;
       padding: 48px;
     }
 
@@ -101,7 +130,7 @@
 
     &:nth-of-type(2)::before {
       top: 50%;
-      left: -30%;
+      left: -25%;
       transform: translateY(-50%);
     }
 
@@ -112,8 +141,8 @@
   }
 
   &__card-image {
-    width: 224px;
-    height: 197px;
+    width: 180px;
+    height: 130px;
     align-self: center;
 
     &:not(:last-child) {
@@ -140,6 +169,11 @@
     font-size: 20px;
     line-height: calc(30 / 20);
     letter-spacing: 0.02em;
+    margin-bottom: 15px;
+  }
+
+  p {
+    opacity: 0.6;
   }
 
   a {
@@ -164,7 +198,7 @@
       display: inline-block;
       width: 16px;
       height: 16px;
-      background: url("/img/what/arrow.svg") no-repeat center / contain;
+      background: url("/img/cards/arrow.svg") no-repeat center / contain;
     }
   }
 }
