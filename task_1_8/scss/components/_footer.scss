@@ -76,24 +76,18 @@
     }
   }
 
-  &-top__list-item:not(:last-child) {
-    margin-bottom: 18px;
-  }
-
   &-top a {
+    display: inline-block;
     font-size: 14px;
     line-height: calc(15 / 14);
     color: $color-white;
+    margin-bottom: 18px;
 
     @extend %transition;
 
     &:hover,
     &:focus {
       text-decoration: underline;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: 18px;
     }
   }
 
