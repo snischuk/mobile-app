@@ -422,7 +422,7 @@ body {
     min-height: 555px;
   }
   .cards__card:not(:first-child):nth-child(odd) {
-    margin-top: -75%;
+    transform: translateY(-50%);
   }
 }
 @media (min-width: 1200px) {

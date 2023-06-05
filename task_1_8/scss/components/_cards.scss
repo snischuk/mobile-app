@@ -102,8 +102,8 @@
       width: calc(50% - 35px);
       min-height: 555px;
       &:not(:first-child):nth-child(odd) {
-        // transform: translateY(-50%);
-        margin-top: -75%;
+        transform: translateY(-50%);
+        // margin-top: -75%;
       }
     }
 
