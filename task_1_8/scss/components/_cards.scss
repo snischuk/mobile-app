@@ -8,7 +8,7 @@
   line-height: calc(26 / 16);
   color: $color-black;
 
-  @media ($laptop) {
+  @media (min-width: $laptop) {
     padding-top: 150px;
     padding-bottom: 150px;
   }
@@ -21,7 +21,7 @@
     width: 125px;
     height: 100px;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       width: 255px;
       height: 200px;
     }
@@ -47,13 +47,13 @@
     align-items: center;
     gap: 20px;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       max-width: 980px;
       flex-direction: row;
       justify-content: space-between;
     }
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       column-gap: 105px;
       row-gap: 113px;
     }
@@ -66,12 +66,12 @@
     letter-spacing: 0.05em;
     max-width: 397px;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       width: calc(50% - 35px);
       transform: translate(0, -190px);
     }
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       width: 100%;
       font-size: 36px;
       transform: translate(-70px, -190px);
@@ -80,7 +80,7 @@
     &:not(:last-child) {
       margin-bottom: 15px;
 
-      @media ($tablet) {
+      @media (min-width: $tablet) {
         margin-bottom: 40px;
       }
     }
@@ -98,7 +98,7 @@
     box-shadow: 5px 20px 50px rgba($color-blue, 0.2);
     border-radius: 10px;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       width: calc(50% - 35px);
       min-height: 555px;
       &:not(:first-child):nth-child(odd) {
@@ -107,7 +107,7 @@
       }
     }
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       min-height: 555px;
       padding: 48px;
     }
@@ -148,7 +148,7 @@
     &:not(:last-child) {
       margin-bottom: 10px;
 
-      @media ($tablet) {
+      @media (min-width: $tablet) {
         margin-bottom: 56px;
       }
     }

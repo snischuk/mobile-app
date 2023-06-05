@@ -9,7 +9,7 @@
   color: $color-black;
   text-align: center;
 
-  @media ($laptop) {
+  @media (min-width: $laptop) {
     padding-top: 98px;
     padding-bottom: 123px;
   }
@@ -22,7 +22,7 @@
     width: 125px;
     height: 100px;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       width: 255px;
       height: 200px;
     }
@@ -34,7 +34,7 @@
     background: url("../../img/decor-rect-blue-download.svg") no-repeat center /
       contain;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       bottom: -50px;
       left: -65px;
     }
@@ -46,7 +46,7 @@
     background: url("../../img/decor-rect-brown-download.svg") no-repeat center /
       contain;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       bottom: -50px;
       right: -65px;
     }
@@ -56,11 +56,11 @@
     @include d-flex(column-reverse);
 
     gap: 40px;
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       flex-direction: row;
     }
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       max-width: 1136px;
       column-gap: 68px;
     }
@@ -69,7 +69,7 @@
   &__content {
     @include d-flex(column);
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       flex: 0 1 auto;
       align-self: center;
     }
@@ -86,14 +86,14 @@
   }
 
   p {
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       max-width: 444px;
     }
 
     &:not(:last-child) {
       margin-bottom: 25px;
 
-      @media ($tablet) {
+      @media (min-width: $tablet) {
         margin-bottom: 56px;
       }
     }
@@ -105,7 +105,7 @@
     justify-content: center;
     column-gap: 10px;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       column-gap: 28px;
     }
 
@@ -133,11 +133,11 @@
     max-width: 515px;
     align-self: center;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       flex: 0 0 40%;
     }
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       flex: 0 0 auto;
     }
 
