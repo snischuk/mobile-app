@@ -2,12 +2,12 @@
   padding-top: 15px;
   padding-bottom: 15px;
 
-  @media ($tablet) {
+  @media (min-width: $tablet) {
     padding-top: 25px;
     padding-bottom: 25px;
   }
 
-  @media ($laptop) {
+  @media (min-width: $laptop) {
     padding-top: 45px;
     padding-bottom: 45px;
   }
@@ -21,11 +21,11 @@
     column-gap: 30px;
     row-gap: 20px;
 
-    @media ($mobile-lg) {
+    @media (min-width: $mobile-lg) {
       justify-content: space-between;
     }
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       max-width: 980px;
     }
   }

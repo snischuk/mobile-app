@@ -12,7 +12,7 @@
   line-height: calc(24 / 16);
   color: $color-black;
 
-  @media ($laptop) {
+  @media (min-width: $laptop) {
     padding-top: 150px;
     padding-bottom: 20px;
   }
@@ -47,7 +47,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       width: 20%;
       flex-direction: row;
       column-gap: 6%;
@@ -63,7 +63,7 @@
     min-height: 160px;
     background-color: rgba($color-blue, 0.1);
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       flex: 0 0 calc(50% - 43px);
       min-height: 400px;
     }
@@ -75,7 +75,7 @@
     align-self: center;
     position: relative;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       flex: 0 0 calc(50% - 43px);
       align-self: flex-end;
     }
@@ -102,7 +102,7 @@
     max-width: 180px;
     padding: 0 15px;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       right: 14%;
       transform: translateX(0);
       max-width: 430px;
@@ -123,7 +123,7 @@
     max-width: 448px;
     padding: 0 15px;
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       align-self: stretch;
     }
   }
@@ -134,7 +134,7 @@
     height: 30px;
     background: url("/img/clients/quote-icon.svg") no-repeat center / contain;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       width: 50px;
       height: 50px;
     }
@@ -142,7 +142,7 @@
     &:not(:last-child) {
       margin-bottom: 10px;
 
-      @media ($tablet) {
+      @media (min-width: $tablet) {
         margin-bottom: 40px;
       }
     }
@@ -167,7 +167,7 @@
     position: relative;
     bottom: -10px;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       bottom: -40px;
     }
   }

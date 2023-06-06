@@ -8,7 +8,7 @@
   color: $color-black;
   text-align: center;
 
-  @media ($laptop) {
+  @media (min-width: $laptop) {
     padding-top: 95px;
     padding-bottom: 95px;
   }
@@ -18,11 +18,11 @@
 
     row-gap: 25px;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       row-gap: 30px;
     }
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       max-width: 980px;
       row-gap: 88px;
     }
@@ -43,12 +43,12 @@
     row-gap: 10px;
     column-gap: 20px;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       row-gap: 50px;
       column-gap: 15px;
     }
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       column-gap: 106px;
     }
   }
@@ -58,11 +58,11 @@
 
     align-items: center;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       flex: 0 0 calc(50% - 15px);
     }
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       flex: 0 0 calc((100% / 3) - 212px);
     }
   }
@@ -83,7 +83,7 @@
     &:not(:last-child) {
       margin-bottom: 15px;
 
-      @media ($tablet) {
+      @media (min-width: $tablet) {
         margin-bottom: 30px;
       }
     }
@@ -100,7 +100,7 @@
   }
 
   p {
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       min-width: 246px;
     }
   }

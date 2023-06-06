@@ -194,17 +194,17 @@ body {
 .header__menu a {
   font-size: 18px;
   line-height: 1.1875;
-  color: rgb(15, 0, 26);
+  color: #0f001a;
 }
 .header__menu a:hover, .header__menu a:focus {
-  color: rgb(74, 153, 211);
+  color: #4a99d3;
 }
 
 .main {
   font-size: 16px;
   line-height: 1.8;
-  color: rgb(15, 0, 26);
-  background: linear-gradient(180deg, rgba(74, 153, 211, 0.2) -17.33%, rgba(74, 153, 211, 0) 75.91%), rgb(255, 255, 255);
+  color: #0f001a;
+  background: linear-gradient(180deg, rgba(74, 153, 211, 0.2) -17.33%, rgba(74, 153, 211, 0) 75.91%), #ffffff;
 }
 .main__container {
   display: flex;
@@ -324,7 +324,7 @@ body {
   padding-bottom: 50px;
   font-size: 16px;
   line-height: 1.625;
-  color: rgb(15, 0, 26);
+  color: #0f001a;
 }
 @media (min-width: 1200px) {
   .cards {
@@ -412,7 +412,7 @@ body {
   padding: 15px;
   max-width: 410px;
   min-height: 480px;
-  background: rgb(255, 255, 255);
+  background: #ffffff;
   box-shadow: 5px 20px 50px rgba(74, 153, 211, 0.2);
   border-radius: 10px;
 }
@@ -422,7 +422,7 @@ body {
     min-height: 555px;
   }
   .cards__card:not(:first-child):nth-child(odd) {
-    margin-top: -75%;
+    transform: translateY(-50%);
   }
 }
 @media (min-width: 1200px) {
@@ -494,7 +494,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 2.1428571429;
-  color: rgb(74, 153, 211);
+  color: #4a99d3;
   letter-spacing: 0.05em;
 }
 .cards a:hover, .cards a:focus {
@@ -513,7 +513,7 @@ body {
   background: rgba(74, 153, 211, 0.1);
   font-size: 16px;
   line-height: 1.625;
-  color: rgb(15, 0, 26);
+  color: #0f001a;
   text-align: center;
 }
 @media (min-width: 1200px) {
@@ -542,7 +542,7 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: clac(27/26);
-  color: rgb(74, 153, 211);
+  color: #4a99d3;
 }
 .steps__items {
   display: flex;
@@ -586,10 +586,10 @@ body {
   height: 60px;
   display: inline-block;
   stroke-width: 0;
-  fill: rgb(211, 132, 74);
+  fill: #d3844a;
 }
 .steps svg:hover {
-  fill: rgb(74, 153, 211);
+  fill: #4a99d3;
 }
 .steps svg:not(:last-child) {
   margin-bottom: 15px;
@@ -618,7 +618,7 @@ body {
   padding-bottom: 50px;
   font-size: 16px;
   line-height: 1.5;
-  color: rgb(15, 0, 26);
+  color: #0f001a;
 }
 .clients [name=slides] {
   display: none;
@@ -788,17 +788,17 @@ body {
   border-radius: 4px;
 }
 .clients label:hover {
-  background-color: rgb(74, 153, 211);
+  background-color: #4a99d3;
 }
 .clients label:hover .clients-carousel__arrow-btn-icon {
-  border-color: rgb(255, 255, 255);
+  border-color: #ffffff;
 }
 .clients-carousel__arrow-btn-icon {
   display: block;
   width: 28px;
   height: 28px;
-  border-top: 7px solid rgb(74, 153, 211);
-  border-right: 7px solid rgb(74, 153, 211);
+  border-top: 7px solid #4a99d3;
+  border-right: 7px solid #4a99d3;
   background: transparent;
 }
 .clients-carousel__arrow-btn-icon--left {
@@ -830,7 +830,7 @@ body {
   overflow: hidden;
   font-size: 16px;
   line-height: 1.5;
-  color: rgb(15, 0, 26);
+  color: #0f001a;
   text-align: center;
 }
 @media (min-width: 1200px) {
@@ -970,8 +970,8 @@ body {
 }
 
 .footer {
-  background-color: rgb(74, 153, 211);
-  color: rgb(255, 255, 255);
+  background-color: #4a99d3;
+  color: #ffffff;
 }
 .footer-top {
   padding-top: 55px;
@@ -1043,7 +1043,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 .footer-top h2:not(:last-child) {
   margin-bottom: 34px;
@@ -1052,7 +1052,7 @@ body {
   display: inline-block;
   font-size: 14px;
   line-height: 1.0714285714;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   margin-bottom: 18px;
 }
 .footer-top a:hover, .footer-top a:focus {
@@ -1092,10 +1092,10 @@ body {
 .footer-top input {
   font-size: 14px;
   line-height: 1;
-  color: rgb(211, 132, 74);
+  color: #d3844a;
   border-radius: 3px;
   padding: 18px 10px;
-  border: 1px solid rgb(74, 153, 211);
+  border: 1px solid #4a99d3;
 }
 .footer-top input::-moz-placeholder {
   color: rgba(15, 0, 26, 0.5);
@@ -1107,7 +1107,7 @@ body {
   color: rgba(15, 0, 26, 0.5);
 }
 .footer-top input:hover, .footer-top input:focus {
-  border-color: rgb(211, 132, 74);
+  border-color: #d3844a;
 }
 @media (min-width: 768px) {
   .footer-top input {
@@ -1123,16 +1123,16 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.0625;
-  color: rgb(74, 153, 211);
+  color: #4a99d3;
   cursor: pointer;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   padding: 16px;
   border-radius: 3px;
-  border: 1px solid rgb(74, 153, 211);
+  border: 1px solid #4a99d3;
 }
 .footer-top button:hover, .footer-top button:focus {
-  border-color: rgb(211, 132, 74);
-  color: rgb(211, 132, 74);
+  border-color: #d3844a;
+  color: #d3844a;
 }
 @media (min-width: 768px) {
   .footer-top button {
@@ -1147,7 +1147,7 @@ body {
 .footer-bottom {
   padding-top: 20px;
   padding-bottom: 20px;
-  border-top: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid #ffffff;
 }
 .footer-bottom__container {
   display: flex;
@@ -1181,10 +1181,10 @@ body {
 }
 .footer-bottom a {
   cursor: pointer;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 .footer-bottom a:hover, .footer-bottom a:focus {
-  color: rgb(211, 132, 74);
+  color: #d3844a;
 }
 .footer-bottom svg {
   display: inline-block;

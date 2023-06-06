@@ -16,7 +16,7 @@
     row-gap: 30px;
     column-gap: 60px;
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       flex-wrap: nowrap;
       column-gap: 80px;
     }
@@ -39,12 +39,12 @@
     row-gap: 30px;
     column-gap: 60px;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       justify-content: center;
       column-gap: 110px;
     }
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       justify-content: flex-end;
       flex: 1 1 auto;
       column-gap: 60px;
@@ -97,7 +97,7 @@
     row-gap: 20px;
     width: 100%;
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       max-width: 394px;
     }
   }
@@ -112,11 +112,11 @@
 
     gap: 20px;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       flex-direction: row;
     }
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       column-gap: 10px;
     }
   }
@@ -142,11 +142,11 @@
       border-color: $color-orange;
     }
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       flex: 1 0 calc(70% - 20px);
     }
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       flex: 1 0 calc(70% - 10px);
     }
   }
@@ -172,11 +172,11 @@
       color: $color-orange;
     }
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       flex: 1 0 calc(30% - 20px);
     }
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       flex: 1 0 calc(30% - 10px);
     }
   }
@@ -195,7 +195,7 @@
     align-items: center;
     gap: 20px;
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       flex-direction: row;
       justify-content: space-between;
     }

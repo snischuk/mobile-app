@@ -19,14 +19,14 @@
     padding-top: 68px;
     padding-bottom: 50px;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       flex-direction: row;
       column-gap: 32px;
       padding-top: 33px;
       padding-bottom: 40px;
     }
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       max-width: 1298px;
       justify-content: flex-end;
       padding-top: 27px;
@@ -39,7 +39,7 @@
 
     align-items: center;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       flex: 0 1 auto;
       align-self: center;
       align-items: flex-start;
@@ -56,18 +56,18 @@
       margin-bottom: 14px;
     }
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       max-width: 636px;
       font-size: 36px;
     }
 
-    @media ($laptop) {
+    @media (min-width: $laptop) {
       font-size: 50px;
     }
   }
 
   p {
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       max-width: 636px;
       font-size: 20px;
     }
@@ -75,7 +75,7 @@
     &:not(:last-child) {
       margin-bottom: 15px;
 
-      @media ($tablet) {
+      @media (min-width: $tablet) {
         margin-bottom: 60px;
       }
     }
@@ -86,7 +86,7 @@
 
     column-gap: 15px;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       column-gap: 20px;
     }
 
@@ -114,7 +114,7 @@
     max-width: 440px;
     align-self: center;
 
-    @media ($tablet) {
+    @media (min-width: $tablet) {
       flex: 0 0 35%;
     }
 
