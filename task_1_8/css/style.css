@@ -348,12 +348,12 @@ body {
 .cards::before {
   top: 0;
   right: -35px;
-  background: url("/img/decor-rect-blue-cards.svg") no-repeat center/contain;
+  background: url("/img/decor/decor-rect-blue-cards.svg") no-repeat center/contain;
 }
 .cards::after {
   bottom: 0;
   left: -35px;
-  background: url("/img/decor-rect-brown-cards.svg") no-repeat center/contain;
+  background: url("/img/decor/decor-rect-brown-cards.svg") no-repeat center/contain;
 }
 .cards__container {
   display: flex;
@@ -439,7 +439,7 @@ body {
   height: 153px;
   display: block;
   z-index: -1;
-  background: url("/img/decor-square-of-dots.svg") no-repeat center/contain;
+  background: url("/img/decor/decor-square-of-dots.svg") no-repeat center/contain;
 }
 .cards__card:nth-of-type(1)::before {
   top: -14%;
@@ -700,7 +700,7 @@ body {
   height: 153px;
   display: block;
   z-index: -1;
-  background: url("/img/decor-square-of-dots.svg") no-repeat center/contain;
+  background: url("/img/decor/decor-square-of-dots.svg") no-repeat center/contain;
 }
 .clients picture {
   position: absolute;
@@ -850,7 +850,7 @@ body {
 .download::before {
   bottom: -25px;
   left: -32px;
-  background: url("../../img/decor-rect-blue-download.svg") no-repeat center/contain;
+  background: url("../../img/decor/decor-rect-blue-download.svg") no-repeat center/contain;
 }
 @media (min-width: 768px) {
   .download::before {
@@ -861,7 +861,7 @@ body {
 .download::after {
   bottom: -25px;
   right: -32px;
-  background: url("../../img/decor-rect-brown-download.svg") no-repeat center/contain;
+  background: url("../../img/decor/decor-rect-brown-download.svg") no-repeat center/contain;
 }
 @media (min-width: 768px) {
   .download::after {

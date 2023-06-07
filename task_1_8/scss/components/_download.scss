@@ -31,8 +31,8 @@
   &::before {
     bottom: -25px;
     left: -32px;
-    background: url("../../img/decor-rect-blue-download.svg") no-repeat center /
-      contain;
+    background: url("../../img/decor/decor-rect-blue-download.svg") no-repeat
+      center / contain;
 
     @media (min-width: $tablet) {
       bottom: -50px;
@@ -43,8 +43,8 @@
   &::after {
     bottom: -25px;
     right: -32px;
-    background: url("../../img/decor-rect-brown-download.svg") no-repeat center /
-      contain;
+    background: url("../../img/decor/decor-rect-brown-download.svg") no-repeat
+      center / contain;
 
     @media (min-width: $tablet) {
       bottom: -50px;
