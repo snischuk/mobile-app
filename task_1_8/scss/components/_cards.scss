@@ -91,6 +91,7 @@
 
     row-gap: 10px;
     position: relative;
+    z-index: auto;
     padding: 15px;
     max-width: 410px;
     min-height: 480px;
@@ -103,7 +104,6 @@
       min-height: 555px;
       &:not(:first-child):nth-child(odd) {
         transform: translateY(-50%);
-        // margin-top: -75%;
       }
     }
 
