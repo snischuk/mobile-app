@@ -52,7 +52,7 @@
     }
   }
 
-  &__container {
+  .container {
     @include d-flex(column-reverse);
 
     gap: 40px;

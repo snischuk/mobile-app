@@ -7,7 +7,7 @@
     padding-bottom: 30px;
   }
 
-  &-top__container {
+  .container {
     @include d-flex(row);
 
     flex-wrap: wrap;

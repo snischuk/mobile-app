@@ -13,7 +13,7 @@
     padding-bottom: 95px;
   }
 
-  &__container {
+  .container {
     @include d-flex(column);
 
     row-gap: 25px;

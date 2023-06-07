@@ -41,7 +41,7 @@
       contain;
   }
 
-  &__container {
+  .container {
     @include d-flex(column);
 
     flex-wrap: wrap;
