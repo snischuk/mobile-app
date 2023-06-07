@@ -788,25 +788,19 @@ body {
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
 }
+.clients label svg {
+  width: 16px;
+  height: 28px;
+  fill: #4a99d3;
+}
+.clients label:first-child svg {
+  transform: rotate(-180deg);
+}
 .clients label:hover {
   background-color: #4a99d3;
 }
-.clients label:hover .clients-carousel__arrow-btn-icon {
-  border-color: #ffffff;
-}
-.clients-carousel__arrow-btn-icon {
-  display: block;
-  width: 28px;
-  height: 28px;
-  border-top: 7px solid #4a99d3;
-  border-right: 7px solid #4a99d3;
-  background: transparent;
-}
-.clients-carousel__arrow-btn-icon--left {
-  transform: rotateZ(225deg);
-}
-.clients-carousel__arrow-btn-icon--right {
-  transform: rotateZ(45deg);
+.clients label:hover svg {
+  fill: #ffffff;
 }
 .clients #switch-1:checked ~ .clients-carousel__track {
   transform: translateX(0%);

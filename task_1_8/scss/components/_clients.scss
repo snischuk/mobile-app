@@ -186,29 +186,22 @@
 
     @extend %transition;
 
+    svg {
+      width: 16px;
+      height: 28px;
+      fill: $color-blue;
+    }
+
+    &:first-child svg {
+      transform: rotate(-180deg);
+    }
+
     &:hover {
       background-color: $color-blue;
 
-      .clients-carousel__arrow-btn-icon {
-        border-color: $color-white;
+      svg {
+        fill: $color-white;
       }
-    }
-  }
-
-  &-carousel__arrow-btn-icon {
-    display: block;
-    width: 28px;
-    height: 28px;
-    border-top: 7px solid $color-blue;
-    border-right: 7px solid $color-blue;
-    background: transparent;
-
-    &--left {
-      transform: rotateZ(225deg);
-    }
-
-    &--right {
-      transform: rotateZ(45deg);
     }
   }
 
