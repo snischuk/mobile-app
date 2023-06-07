@@ -702,7 +702,7 @@ body {
   z-index: -1;
   background: url("/img/decor-square-of-dots.svg") no-repeat center/contain;
 }
-.clients-carousel__image {
+.clients picture {
   position: absolute;
   bottom: 0;
   right: 50%;
@@ -711,13 +711,13 @@ body {
   padding: 0 15px;
 }
 @media (min-width: 768px) {
-  .clients-carousel__image {
+  .clients picture {
     right: 14%;
     transform: translateX(0);
     max-width: 430px;
   }
 }
-.clients-carousel__image img {
+.clients picture img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
