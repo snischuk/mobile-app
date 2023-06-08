@@ -12,9 +12,10 @@
     padding-bottom: 45px;
   }
 
-  &__container {
+  .container {
     @include d-flex(row);
 
+    margin: 0 auto;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;

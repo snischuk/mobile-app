@@ -30,17 +30,18 @@
   &::before {
     top: 0;
     right: -35px;
-    background: url("/img/decor-rect-blue-cards.svg") no-repeat center / contain;
+    background: url("/img/decor/decor-rect-blue-cards.svg") no-repeat center /
+      contain;
   }
 
   &::after {
     bottom: 0;
     left: -35px;
-    background: url("/img/decor-rect-brown-cards.svg") no-repeat center /
+    background: url("/img/decor/decor-rect-brown-cards.svg") no-repeat center /
       contain;
   }
 
-  &__container {
+  .container {
     @include d-flex(column);
 
     flex-wrap: wrap;
@@ -91,6 +92,7 @@
 
     row-gap: 10px;
     position: relative;
+    z-index: auto;
     padding: 15px;
     max-width: 410px;
     min-height: 480px;
@@ -103,7 +105,6 @@
       min-height: 555px;
       &:not(:first-child):nth-child(odd) {
         transform: translateY(-50%);
-        // margin-top: -75%;
       }
     }
 
@@ -119,7 +120,7 @@
       height: 153px;
       display: block;
       z-index: -1;
-      background: url("/img/decor-square-of-dots.svg") no-repeat center /
+      background: url("/img/decor/decor-square-of-dots.svg") no-repeat center /
         contain;
     }
 

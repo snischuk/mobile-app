@@ -89,12 +89,12 @@
       height: 153px;
       display: block;
       z-index: -1;
-      background: url("/img/decor-square-of-dots.svg") no-repeat center /
+      background: url("/img/decor/decor-square-of-dots.svg") no-repeat center /
         contain;
     }
   }
 
-  &-carousel__image {
+  picture {
     position: absolute;
     bottom: 0;
     right: 50%;
@@ -181,34 +181,27 @@
     width: 80px;
     height: 80px;
     background-color: #fff;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     border-radius: 4px;
 
     @extend %transition;
 
+    svg {
+      width: 16px;
+      height: 28px;
+      fill: $color-blue;
+    }
+
+    &:first-child svg {
+      transform: rotate(-180deg);
+    }
+
     &:hover {
       background-color: $color-blue;
 
-      .clients-carousel__arrow-btn-icon {
-        border-color: $color-white;
+      svg {
+        fill: $color-white;
       }
-    }
-  }
-
-  &-carousel__arrow-btn-icon {
-    display: block;
-    width: 28px;
-    height: 28px;
-    border-top: 7px solid $color-blue;
-    border-right: 7px solid $color-blue;
-    background: transparent;
-
-    &--left {
-      transform: rotateZ(225deg);
-    }
-
-    &--right {
-      transform: rotateZ(45deg);
     }
   }
 
