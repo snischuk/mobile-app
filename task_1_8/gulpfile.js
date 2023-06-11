@@ -26,7 +26,7 @@ function styles() {
 }
 
 function watcher() {
-  watch(["./app/scss/style.scss"], styles);
+  watch(["./app/scss/**/*.*"], styles);
   watch(["./app/components/*", "./app/pages/*"], pages);
   watch(["./app/*.html"]).on("change", browserSync.reload);
 }
