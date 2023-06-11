@@ -1,0 +1,21 @@
+{
+  "name": "first-landing-gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-include": "^2.4.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.63.3",
+    "browser-sync": "^2.29.3",
+    "gulp-uglify-es": "^3.0.0"
+  }
+}
